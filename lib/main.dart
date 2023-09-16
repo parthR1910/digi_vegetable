@@ -1,7 +1,9 @@
-import 'package:flutter/material.dart';
+import 'package:digi_vegetable/ui/app_routes/app_routes.dart';
+import 'package:digi_vegetable/ui/app_routes/route_manager.dart';
+import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -9,13 +11,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        onGenerateRoute: RoutesManager.onGenerateRoutes,
+        initialRoute: AppRoute.slash,
       ),
-      home: const Scaffold(),
     );
   }
 }
