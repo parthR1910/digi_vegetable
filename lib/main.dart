@@ -1,5 +1,6 @@
 import 'package:digi_vegetable/ui/app_routes/app_routes.dart';
 import 'package:digi_vegetable/ui/app_routes/route_manager.dart';
+import 'package:digi_vegetable/ui/utils/theme/app_colors.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
 void main() {
@@ -18,11 +19,11 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
           useMaterial3: true,
         ),
         onGenerateRoute: RoutesManager.onGenerateRoutes,
-        initialRoute: AppRoute.slash,
+        initialRoute: AppRoute.login,
       ),
     );
   }

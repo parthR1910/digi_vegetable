@@ -5,7 +5,7 @@ class AppColors {
 
   static AppColors instance = AppColors._privateConstructor();
 
-  static const Color primary = Color(0xffB12A1C);
+  static const Color primary = Color(0xff1d9c49);
   static const Color textFieldBorderColor = Color(0xffe8e8e8);
   static const Color textFieldBackgroundColor = Color(0xffF6F6F6);
   static const Color hintTextColor = Color(0xffBDBDBD);

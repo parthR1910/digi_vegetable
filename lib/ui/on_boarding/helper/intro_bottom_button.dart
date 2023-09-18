@@ -1,4 +1,5 @@
 import 'package:digi_vegetable/ui/on_boarding/controller/on_boarding_controller.dart';
+import 'package:digi_vegetable/ui/utils/common_widget/common_button.dart';
 import '../../utils/theme/app_colors.dart';
 import '../../utils/theme/text_styles.dart';
 import '../../utils/theme/theme.dart';
@@ -48,13 +49,10 @@ class IntroBottomButton extends ConsumerWidget {
               })
             ),
           ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              fixedSize: Size(300.w, 50.h)
-            ),
-              onPressed: (){
-              onBoardWatch.nextButton(context);
-          }, child: Text("Next",style: TextStyles.w600.copyWith(fontSize: 16.sp,color: AppColors.white),))
+           SizedBox(height: 10.h,),
+           CommonButton(onTap: (){
+             onBoardWatch.nextButton(context);
+           },btnText: "Next",width: 200.w,borderRadius: 14.r,)
         ],
       ),
     );

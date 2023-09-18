@@ -22,9 +22,9 @@ extension ContextExt on BuildContext {
 
   double get screenWidth => MediaQuery.sizeOf(this).width;
 
-  // ColorScheme get colorScheme => Theme.of(this).colorScheme;
-  //
-  // TextTheme get textTheme => Theme.of(this).textTheme;
-  //
-  // Color get primaryColor => Theme.of(this).primaryColor;
+  ColorScheme get colorScheme => Theme.of(this).colorScheme;
+
+  TextTheme get textTheme => Theme.of(this).textTheme;
+
+  Color get primaryColor => Theme.of(this).primaryColor;
 }

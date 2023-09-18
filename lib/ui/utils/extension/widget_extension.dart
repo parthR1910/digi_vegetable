@@ -4,8 +4,12 @@ import 'package:flutter/material.dart';
 
 extension WidgetExtension on Widget{
   paddingAll(double value) => Padding(padding: EdgeInsets.all(value),child: this,);
-  paddingSymmetric({double? vertical,double? horizontal })=> Padding(padding: EdgeInsets.symmetric(vertical: vertical!,horizontal: horizontal!),child: this,);
-
+  paddingHorizontal(double val) =>
+      Padding(padding: EdgeInsets.symmetric(horizontal: val), child: this);
+  paddingVertical(double val) =>
+      Padding(padding: EdgeInsets.symmetric(vertical: val), child: this);
+  paddingSymmetric({required double horizontal, required double vertical}) =>
+      Padding(padding: EdgeInsets.symmetric(vertical: vertical,horizontal: horizontal), child: this);
   paddingOnly(
       {double left = 0,
         double right = 0,
