@@ -49,7 +49,7 @@ class ForgetPassword extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(
-                  height: 300.h,
+                  height: 350.h,
                   width: context.screenHeight,
                   child: Image.asset(AppAssets.forgetPassImage,fit: BoxFit.cover,),
                 ),

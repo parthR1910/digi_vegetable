@@ -18,18 +18,17 @@ class Login extends StatelessWidget {
 
   get _bodyWidget => Column(
     children: [
-      Expanded(flex: 4,
-      //     child: Container(
-      //   color: Colors.black,
-      // ),
-        child: Image.asset(AppAssets.loginImage,fit: BoxFit.cover,),
-      ),
       Expanded(
-        flex: 7,
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
+                SizedBox(
+                  height: 300,
+                  width: double.infinity,
+                  child:  Image.asset(AppAssets.loginImage,fit: BoxFit.cover,),
+                ),
+                SizedBox(height: 5.h,),
                 Text("Welcome back!",style: TextStyles.w600.copyWith(fontSize: 22.sp,color: AppColors.black),),
                 Text("Log in with your data that you intered during your registration",style: TextStyles.w600.copyWith(fontSize: 14.sp,color: AppColors.textGreyColor),),
                 SizedBox(height: 40.h,),

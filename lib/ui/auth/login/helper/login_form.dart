@@ -24,6 +24,7 @@ class LoginForm extends StatelessWidget {
           children: [
             CommonTextFormField(
               controller: loginWatch.emailController,
+              keyboardType: TextInputType.emailAddress,
               hintText: "Email Address",
               validator: emailValidator,
               prefixIcon: Image.asset(AppAssets.emailIcon,scale: 18,).paddingOnly(left: 5.w),
@@ -37,7 +38,6 @@ class LoginForm extends StatelessWidget {
             ),
             SizedBox(height: 8.h,),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween ,
               children: [
                Row(
                  children: [
@@ -47,12 +47,12 @@ class LoginForm extends StatelessWidget {
                      loginWatch.updateCheckboxSelected(val!);
                    }),
                    SizedBox(width: 5.w,),
-                   Text("Remember me",style: TextStyles.w500.copyWith(fontSize: 16.sp,color: AppColors.hintTextColor),)
+                   Text("Remember me",style: TextStyles.w500.copyWith(fontSize: 12.sp,color: AppColors.hintTextColor),)
                  ],
                ),
                TextButton(onPressed: (){
                  context.pushNamed(AppRoute.forgetPassword);
-               }, child:  Text("Forgot Password?",style:TextStyles.w500.copyWith(fontSize: 14.sp,color: AppColors.primary,))
+               }, child:  Text("Forgot Password?",style:TextStyles.w500.copyWith(fontSize: 12.sp,color: AppColors.primary,))
                )],
             ),
             SizedBox(height: 40.h,),

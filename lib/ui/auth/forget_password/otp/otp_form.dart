@@ -56,7 +56,7 @@ class OTPForm extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 60.h,),
+          SizedBox(height: 80.h,),
           Row(
             children: [
               Expanded(child: CommonButton(onTap: (){}, btnText: "Resend",border: Border.all(color: AppColors.primary,width: 1.5),backgroundColor: AppColors.white,txtColor: AppColors.primary,)),

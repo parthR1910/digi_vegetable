@@ -17,7 +17,13 @@ class ForgetPassController extends ChangeNotifier{
     otp = val;
     notifyListeners();
   }
-
+  
+  nextButton(BuildContext context){
+    if(forgetPassKey.currentState!.validate()){
+      context.pushNamed(AppRoute.otp);
+    }
+  }
+  /// otp verification
   confirm(BuildContext context){
     if(otp !=null&& otp!.length == 4 && otp == otpValue){
       print("Your OTP $otp");

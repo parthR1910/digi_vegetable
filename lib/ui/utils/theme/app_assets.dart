@@ -23,5 +23,11 @@ class AppAssets {
   static const String successIcon = 'assets/images/Successmark.png';
   static const String camaraIcon = 'assets/images/cameraIcon.png';
 
+  static const String homeIcon = 'assets/images/HomeUnselected.png';
+  static const String categoryIcon = 'assets/images/Category.png';
+  static const String basketIcon = 'assets/images/basket.png';
+  static const String buyIcon = 'assets/images/Buy.png';
+  static const String personIcon = 'assets/images/Profile.png';
+
 }
 

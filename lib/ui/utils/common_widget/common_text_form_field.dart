@@ -21,6 +21,7 @@ class CommonTextFormField extends StatelessWidget {
   final TextStyle? suffixStyle;
   final GestureTapCallback? onTap;
   final Function(String)? onChanged;
+  final int? maxLength;
 
   const CommonTextFormField(
       {super.key,
@@ -36,11 +37,12 @@ class CommonTextFormField extends StatelessWidget {
       this.keyboardType,
       this.suffixStyle,
       this.validator,
-      this.onTap, this.prefixIcon, this.onChanged});
+      this.onTap, this.prefixIcon, this.onChanged, this.maxLength});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      maxLength: maxLength,
       onChanged: onChanged,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       readOnly: readOnly,
@@ -54,6 +56,7 @@ class CommonTextFormField extends StatelessWidget {
       obscureText: obscureText!,
       style: TextStyles.w500.copyWith(color: AppColors.black, fontSize: 16.sp),
       decoration: InputDecoration(
+        counterText: "",
         filled: true,
         hintText: hintText,
         hintStyle: hintStyle ??

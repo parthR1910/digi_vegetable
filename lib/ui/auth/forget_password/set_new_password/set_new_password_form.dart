@@ -21,9 +21,9 @@ class SetNewPasswordForm extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Set New Password",style: TextStyles.w600.copyWith(fontSize: 22.sp,color: AppColors.black),),
+            Text("Set New Password",style: TextStyles.w600.copyWith(fontSize: 20.sp,color: AppColors.black),),
             Text("Your new password must be different from previous password.",style: TextStyles.w600.copyWith(fontSize: 14.sp,color: AppColors.textGreyColor),),
-            SizedBox(height: 40.h,),
+            SizedBox(height: 30.h,),
             CommonTextFormField(
               controller: forgetPassWatch.newPasswordController,
               hintText: "Enter New Password",
@@ -37,7 +37,7 @@ class SetNewPasswordForm extends StatelessWidget {
               validator:(v)=> confirmPassValidator(v,forgetPassWatch.newPasswordController.text),
               prefixIcon: Image.asset(AppAssets.passWordIcon,scale: 18,).paddingOnly(left: 5.w),
             ),
-            SizedBox(height: 160.h,),
+            SizedBox(height: 60.h,),
             CommonButton(onTap: (){
               forgetPassWatch.changePassWordButton(context);
             }, btnText: "Change Password"),

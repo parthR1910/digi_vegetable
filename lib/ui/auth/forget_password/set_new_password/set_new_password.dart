@@ -33,10 +33,10 @@ class SetNewPassword extends StatelessWidget {
                                 (states) => Colors.grey.shade200)),
                     icon: Icon(
                       Icons.arrow_back_rounded,
-                      size: 30.sp,
+                      size: 28.sp,
                     )),
                 Expanded(
-                  child: Text("Set New Password",textAlign: TextAlign.center,style: TextStyles.w600.copyWith(fontSize: 20.sp, color: AppColors.black),),
+                  child: Text("Set New Password",textAlign: TextAlign.center,style: TextStyles.w600.copyWith(fontSize: 18.sp, color: AppColors.black),),
                 )
               ],
             ),
@@ -44,7 +44,7 @@ class SetNewPassword extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 300.h,
+                    height: 350.h,
                     width: context.screenHeight,
                     child: Image.asset(AppAssets.setNewPassImg,fit: BoxFit.cover,),
                   ),

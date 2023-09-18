@@ -26,15 +26,18 @@ class RegisterDetailsForm extends StatelessWidget {
           SizedBox(height: 10.h,),
           CommonTextFormField(
             readOnly: true,
+            onTap: ()=>registerDetailWatch.pickDate(context),
             controller: registerDetailWatch.birthDateController,
             hintText: "Date of Birth",
             prefixIcon:  const Icon(Icons.date_range_outlined,color: AppColors.hintTextColor,size: 28,).paddingOnly(left: 5.w),
           ),
           SizedBox(height: 10.h,),
           CommonTextFormField(
+            maxLength: 10,
             controller: registerDetailWatch.phoneController,
             hintText: "Phone",
             validator: phoneValidator,
+            keyboardType: TextInputType.phone,
             prefixIcon: const Icon(Icons.call,color: AppColors.hintTextColor,size: 28,).paddingOnly(left: 5.w),
           ),
           SizedBox(height: 280.h,),

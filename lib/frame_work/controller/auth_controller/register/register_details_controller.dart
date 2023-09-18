@@ -28,4 +28,5 @@ class RegisterDetailsController extends ChangeNotifier{
   }
 
 
+
 }
