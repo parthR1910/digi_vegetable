@@ -32,6 +32,14 @@ String? passValidator(String? input) {
   }
 }
 
+String? phoneValidator(String? input) {
+  if (input == null || input.trim().length < 10) {
+    return 'Password must be 10 characters long';
+  } else {
+    return null;
+  }
+}
+
 String? confirmPassValidator(String? input, String password) {
   if (input == null || input.trim().length < 8) {
     return 'Password must be 8 characters long';

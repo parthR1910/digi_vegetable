@@ -4,9 +4,9 @@ import 'package:digi_vegetable/ui/app_routes/app_routes.dart';
 import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
 import 'package:digi_vegetable/ui/utils/theme/app_colors.dart';
 
-import '../../../utils/common_widget/common_button.dart';
-import '../../../utils/theme/text_styles.dart';
-import '../../../utils/theme/theme.dart';
+import '../../../../utils/common_widget/common_button.dart';
+import '../../../../utils/theme/text_styles.dart';
+import '../../../../utils/theme/theme.dart';
 
 class RegisterButton extends ConsumerWidget {
   const RegisterButton({super.key});
@@ -16,7 +16,7 @@ class RegisterButton extends ConsumerWidget {
     return Column(
       children: [
         CommonButton(onTap: (){
-          ref.watch(registerController).registerButton();
+          ref.watch(registerController).registerButton(context);
         }, btnText: "Sign In"),
         const SizedBox(height: 5,),
         Row(

@@ -1,5 +1,6 @@
 import 'package:digi_vegetable/ui/auth/forget_password/otp/otp_form.dart';
 import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
+import 'package:digi_vegetable/ui/utils/extension/widget_extension.dart';
 
 import '../../../utils/theme/app_assets.dart';
 import '../../../utils/theme/app_colors.dart';
@@ -46,7 +47,7 @@ class OTP extends StatelessWidget {
                     height: 350.h,
                     width: context.screenHeight,
                     child: Image.asset(AppAssets.otpImage,fit: BoxFit.fill,),
-                  ),
+                  ).paddingHorizontal(10.w),
                   const OTPForm()
                 ],
               ),

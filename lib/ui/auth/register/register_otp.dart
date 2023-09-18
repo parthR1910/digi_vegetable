@@ -1,14 +1,15 @@
-import 'package:digi_vegetable/ui/auth/forget_password/set_new_password/set_new_password_form.dart';
+import 'package:digi_vegetable/ui/auth/forget_password/otp/otp_form.dart';
+import 'package:digi_vegetable/ui/auth/register/helper/register_otp/register_otp_form.dart';
 import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
-import 'package:digi_vegetable/ui/utils/theme/theme.dart';
+import 'package:digi_vegetable/ui/utils/extension/widget_extension.dart';
 
-import '../../../utils/theme/app_assets.dart';
-import '../../../utils/theme/app_colors.dart';
-import '../../../utils/theme/text_styles.dart';
+import '../../utils/theme/app_assets.dart';
+import '../../utils/theme/app_colors.dart';
+import '../../utils/theme/text_styles.dart';
+import '../../utils/theme/theme.dart';
 
-class SetNewPassword extends StatelessWidget {
-  const SetNewPassword({super.key});
-
+class RegisterOTP extends StatelessWidget {
+  const RegisterOTP({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +37,7 @@ class SetNewPassword extends StatelessWidget {
                       size: 30.sp,
                     )),
                 Expanded(
-                  child: Text("Set New Password",textAlign: TextAlign.center,style: TextStyles.w600.copyWith(fontSize: 20.sp, color: AppColors.black),),
+                  child: Text("OTP Verification",textAlign: TextAlign.center,style: TextStyles.w600.copyWith(fontSize: 20.sp, color: AppColors.black),),
                 )
               ],
             ),
@@ -46,13 +47,12 @@ class SetNewPassword extends StatelessWidget {
                   SizedBox(
                     height: 300.h,
                     width: context.screenHeight,
-                    child: Image.asset(AppAssets.setNewPassImg,fit: BoxFit.cover,),
-                  ),
-                  const SetNewPasswordForm()
+                    child: Image.asset(AppAssets.registerOtpImage,fit: BoxFit.fill,),
+                  ).paddingHorizontal(10.w),
+                  const RegisterOTPForm()
                 ],
               ),
             ))
-
           ],
         )
     );

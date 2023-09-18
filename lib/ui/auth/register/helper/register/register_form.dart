@@ -1,5 +1,5 @@
 import 'package:digi_vegetable/frame_work/controller/auth_controller/register/register_controller.dart';
-import 'package:digi_vegetable/ui/auth/register/helper/register_button.dart';
+import 'package:digi_vegetable/ui/auth/register/helper/register/register_button.dart';
 import 'package:digi_vegetable/ui/utils/common_widget/common_text_form_field.dart';
 import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
 import 'package:digi_vegetable/ui/utils/extension/widget_extension.dart';
@@ -7,7 +7,7 @@ import 'package:digi_vegetable/ui/utils/form_validation.dart';
 import 'package:digi_vegetable/ui/utils/theme/app_assets.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
-import '../../../utils/theme/text_styles.dart';
+import '../../../../utils/theme/text_styles.dart';
 
 class RegisterForm extends StatelessWidget {
   const RegisterForm({super.key});

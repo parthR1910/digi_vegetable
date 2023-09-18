@@ -1,4 +1,4 @@
-import 'package:digi_vegetable/ui/auth/register/helper/register_form.dart';
+import 'package:digi_vegetable/ui/auth/register/helper/register/register_form.dart';
 import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
 import 'package:digi_vegetable/ui/utils/extension/widget_extension.dart';
 import 'package:digi_vegetable/ui/utils/theme/app_assets.dart';
