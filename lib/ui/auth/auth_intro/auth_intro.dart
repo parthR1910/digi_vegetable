@@ -3,8 +3,8 @@ import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
 import 'package:digi_vegetable/ui/utils/extension/widget_extension.dart';
 import 'package:digi_vegetable/ui/utils/theme/app_assets.dart';
 import 'package:digi_vegetable/ui/utils/theme/app_colors.dart';
-
-import '../../utils/theme/theme.dart';
+import 'package:digi_vegetable/ui/app_routes/app_routes.dart';
+import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
 class AuthIntro extends StatelessWidget {
   const AuthIntro({super.key});
@@ -30,19 +30,12 @@ class AuthIntro extends StatelessWidget {
               ),
             ),
           ),
-          // Expanded(
-          //   child: Container(
-          //     height: context.screenHeight,
-          //     width: context.screenWidth,
-          //     decoration: const BoxDecoration(
-          //         image: DecorationImage(
-          //             image:AssetImage(AppAssets.authIntroImg,),
-          //             fit: BoxFit.cover
-          //         )
-          //     ),),
-          // ),
-          CommonButton(onTap: (){}, btnText: "Sign in",height: 55.h,).paddingHorizontal(10.w),
-          CommonButton(onTap: (){}, btnText: "Sign Up",
+          CommonButton(onTap: (){
+            context.pushNamed(AppRoute.login);
+          }, btnText: "Sign in",height: 55.h,).paddingHorizontal(10.w),
+          CommonButton(onTap: (){
+            context.pushNamed(AppRoute.register);
+          }, btnText: "Sign Up",
             backgroundColor: AppColors.white,
             txtColor: AppColors.primary,
             border: Border.all(color: AppColors.primary,width: 1.5.w),

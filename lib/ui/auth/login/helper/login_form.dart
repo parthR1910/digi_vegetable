@@ -1,6 +1,8 @@
-import 'package:digi_vegetable/frame_work/controller/auth_controller/login_controller.dart';
+import 'package:digi_vegetable/frame_work/controller/auth_controller/login/login_controller.dart';
+import 'package:digi_vegetable/ui/app_routes/app_routes.dart';
 import 'package:digi_vegetable/ui/auth/login/helper/login_button.dart';
 import 'package:digi_vegetable/ui/utils/common_widget/common_text_form_field.dart';
+import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
 import 'package:digi_vegetable/ui/utils/extension/widget_extension.dart';
 import 'package:digi_vegetable/ui/utils/form_validation.dart';
 import 'package:digi_vegetable/ui/utils/theme/app_assets.dart';
@@ -48,7 +50,9 @@ class LoginForm extends StatelessWidget {
                    Text("Remember me",style: TextStyles.w500.copyWith(fontSize: 16.sp,color: AppColors.hintTextColor),)
                  ],
                ),
-               TextButton(onPressed: (){}, child:  Text("Forgot Password?",style:TextStyles.w500.copyWith(fontSize: 14.sp,color: AppColors.primary,))
+               TextButton(onPressed: (){
+                 context.pushNamed(AppRoute.forgetPassword);
+               }, child:  Text("Forgot Password?",style:TextStyles.w500.copyWith(fontSize: 14.sp,color: AppColors.primary,))
                )],
             ),
             SizedBox(height: 40.h,),

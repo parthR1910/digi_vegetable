@@ -20,6 +20,7 @@ class CommonTextFormField extends StatelessWidget {
   final TextInputType? keyboardType;
   final TextStyle? suffixStyle;
   final GestureTapCallback? onTap;
+  final Function(String)? onChanged;
 
   const CommonTextFormField(
       {super.key,
@@ -35,11 +36,12 @@ class CommonTextFormField extends StatelessWidget {
       this.keyboardType,
       this.suffixStyle,
       this.validator,
-      this.onTap, this.prefixIcon});
+      this.onTap, this.prefixIcon, this.onChanged});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onChanged: onChanged,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       readOnly: readOnly,
       controller: controller,

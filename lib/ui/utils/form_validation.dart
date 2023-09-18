@@ -6,7 +6,7 @@ String? nameValidator(String? input) {
   }
 }
 
-String? otpValidator(String? input, int otp) {
+String? otpValidator(String? input, String otp) {
   if (input != null && input.isEmpty) {
     return 'Please Enter your Otp Number';
   } else if (input != otp.toString()) {

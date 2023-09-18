@@ -7,12 +7,16 @@ class AppAssets {
   static const String onBoardImg3 = 'assets/images/onBoardImg3.png';
   static const String authIntroImg = 'assets/images/authIntroImg.png';
   static const String loginImage = 'assets/images/logInImage.png';
+  static const String registerImage = 'assets/images/registerImg.png';
+  static const String forgetPassImage = 'assets/images/forgetPassImg.png';
+  static const String otpImage = 'assets/images/otpImage.png';
 
 
 
   ///Icons of the app
   static const String emailIcon = 'assets/images/email_icon.png';
   static const String passWordIcon = 'assets/images/passwordIcon.png';
+  static const String successIcon = 'assets/images/Successmark.png';
 
 }
 

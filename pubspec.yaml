@@ -39,7 +39,8 @@ dependencies:
   flutter_riverpod:
   image_picker:
   easy_localization:
-
+  page_transition:
+  pinput:
 
 dev_dependencies:
   flutter_test:
