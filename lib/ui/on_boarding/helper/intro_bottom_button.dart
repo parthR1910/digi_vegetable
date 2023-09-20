@@ -1,7 +1,6 @@
 import 'package:digi_vegetable/ui/on_boarding/controller/on_boarding_controller.dart';
 import 'package:digi_vegetable/ui/utils/common_widget/common_button.dart';
 import '../../utils/theme/app_colors.dart';
-import '../../utils/theme/text_styles.dart';
 import '../../utils/theme/theme.dart';
 
 class IntroBottomButton extends ConsumerWidget {

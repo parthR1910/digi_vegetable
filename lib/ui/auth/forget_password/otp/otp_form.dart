@@ -1,7 +1,5 @@
 import 'package:digi_vegetable/ui/utils/common_widget/common_button.dart';
 import 'package:digi_vegetable/ui/utils/extension/widget_extension.dart';
-import 'package:digi_vegetable/ui/utils/form_validation.dart';
-
 import '../../../../frame_work/controller/auth_controller/forget_pass/forgerpass_controller.dart';
 import '../../../utils/theme/app_colors.dart';
 import '../../../utils/theme/text_styles.dart';

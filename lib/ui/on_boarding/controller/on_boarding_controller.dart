@@ -1,3 +1,5 @@
+import 'package:digi_vegetable/ui/app_routes/app_routes.dart';
+import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
 final onBoardingController = ChangeNotifierProvider((ref) => OnBoardingController());
@@ -19,7 +21,8 @@ class OnBoardingController extends ChangeNotifier{
     Curves.easeIn);
     if(index == 3){
       index = 0;
-      Navigator.push(context, MaterialPageRoute(builder: (context) => const Scaffold(),));
+      context.pushAndRemoveUntilNamed(AppRoute.authIntro);
+      // Navigator.push(context, MaterialPageRoute(builder: (context) => const Scaffold(),));
     }
     notifyListeners();
   }

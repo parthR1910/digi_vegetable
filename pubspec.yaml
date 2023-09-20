@@ -38,6 +38,11 @@ dependencies:
   flutter_screenutil:
   flutter_riverpod:
   image_picker:
+  fluttertoast:
+  shared_preferences:
+  file_picker:
+  carousel_slider: ^4.0.0
+  path: ^1.8.3
   easy_localization:
   page_transition:
   pinput:

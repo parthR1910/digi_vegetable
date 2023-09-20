@@ -12,4 +12,5 @@ class AppRoute{
   static const String otp = "otp";
   static const String setNewPassword = "setNewPassword";
   static const String changePassGreeting = "changePassGreeting";
+  static const String dashBoard = "dashBoard";
 }

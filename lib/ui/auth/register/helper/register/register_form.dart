@@ -7,8 +7,6 @@ import 'package:digi_vegetable/ui/utils/form_validation.dart';
 import 'package:digi_vegetable/ui/utils/theme/app_assets.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
-import '../../../../utils/theme/text_styles.dart';
-
 class RegisterForm extends StatelessWidget {
   const RegisterForm({super.key});
 

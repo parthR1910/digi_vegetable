@@ -15,7 +15,7 @@ class LogInButton extends ConsumerWidget {
     return Column(
       children: [
         CommonButton(onTap: (){
-          ref.watch(logInController).loginButton();
+          ref.watch(logInController).loginButton(context);
         }, btnText: "Sign In"),
         const SizedBox(height: 5,),
         Row(

@@ -1,4 +1,3 @@
-import 'package:digi_vegetable/frame_work/controller/auth_controller/login/login_controller.dart';
 import 'package:digi_vegetable/frame_work/controller/auth_controller/register/register_controller.dart';
 import 'package:digi_vegetable/ui/app_routes/app_routes.dart';
 import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';

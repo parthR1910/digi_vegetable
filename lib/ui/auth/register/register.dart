@@ -1,5 +1,6 @@
+import 'package:digi_vegetable/frame_work/controller/auth_controller/register/register_controller.dart';
 import 'package:digi_vegetable/ui/auth/register/helper/register/register_form.dart';
-import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
+import 'package:digi_vegetable/ui/utils/common_widget/common_loading.dart';
 import 'package:digi_vegetable/ui/utils/extension/widget_extension.dart';
 import 'package:digi_vegetable/ui/utils/theme/app_assets.dart';
 import 'package:digi_vegetable/ui/utils/theme/app_colors.dart';
@@ -7,13 +8,16 @@ import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
 import '../../utils/theme/text_styles.dart';
 
-class Register extends StatelessWidget {
+class Register extends ConsumerWidget {
   const Register({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: _bodyWidget,
+  Widget build(BuildContext context,WidgetRef ref) {
+    return CommonLoading(
+      show: ref.watch(registerController).isRegisterButtonLoading,
+      child: Scaffold(
+        body: _bodyWidget,
+      ),
     );
   }
 

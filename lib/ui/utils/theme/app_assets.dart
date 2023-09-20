@@ -22,12 +22,56 @@ class AppAssets {
   static const String passWordIcon = 'assets/images/passwordIcon.png';
   static const String successIcon = 'assets/images/Successmark.png';
   static const String camaraIcon = 'assets/images/cameraIcon.png';
+  static const String appLogo = 'assets/images/AppLogo.png';
+  static const String heartIcon = 'assets/images/heartIcon.png';
+  static const String notificationIcon = 'assets/images/NotificationIcon.png';
+  static const String filterIcon = 'assets/images/filterIcon.png';
+  static const String searchIcon = 'assets/images/SearchIcon.png';
 
+
+
+  ///--------------------- slider images ---------------------------///
+
+  static const String sliderImg1 = 'assets/images/sliderImmg1.png';
+
+  ///---------------------------------------------------------------///
+
+
+  static const String fruitsIcon = 'assets/images/Fruits.png';
+  static const String rootsIcon = 'assets/images/Roots.png';
+  static const String leavesIcon = 'assets/images/Leaves.png';
+  static const String fungiIcon = 'assets/images/Fungi.png';
+
+  static const String stemImg = 'assets/images/Stem.png';
+  static const String podImg = 'assets/images/Pods.png';
+  static const String flowerImg = 'assets/images/Flower.png';
+  static const String bulbsImg = 'assets/images/Bulbs.png';
+  static const String ginGerImg = 'assets/images/gingerImg.png';
+  static const String orangeImg = 'assets/images/orangeImg.png';
+
+
+
+
+  ///-------------------- Navigation Bar Icon ----------------------------///
   static const String homeIcon = 'assets/images/HomeUnselected.png';
-  static const String categoryIcon = 'assets/images/Category.png';
-  static const String basketIcon = 'assets/images/basket.png';
-  static const String buyIcon = 'assets/images/Buy.png';
-  static const String personIcon = 'assets/images/Profile.png';
+  static const String homeActiveIcon = 'assets/images/HomeActiveIcon.png';
 
+  static const String categoryIcon = 'assets/images/Category.png';
+  static const String categoryActiveIcon = 'assets/images/CategoryActiveIcon.png';
+
+  static const String basketIcon = 'assets/images/basket.png';
+  static const String basketActiveIcon = 'assets/images/BasketActive.png';
+
+  static const String buyIcon = 'assets/images/Buy.png';
+  static const String buyActiveIcon = 'assets/images/BuyActiveIcon.png';
+
+  static const String personIcon = 'assets/images/Profile.png';
+  static const String personActiveIcon = 'assets/images/ProfileActive.png';
+  ///--------------------------------------------------------///
+
+
+  /// Offer Banners ////
+  static const String offerBanner1 = 'assets/images/offerBanner1.png';
+  static const String offerBanner2 = 'assets/images/offerBanner2.png';
 }
 

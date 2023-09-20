@@ -7,7 +7,7 @@ import 'package:digi_vegetable/ui/app_routes/app_routes.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
 class AuthIntro extends StatelessWidget {
-  const AuthIntro({super.key});
+  const AuthIntro({super.key,});
 
   @override
   Widget build(BuildContext context) {

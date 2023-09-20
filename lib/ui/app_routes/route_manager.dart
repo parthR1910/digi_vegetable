@@ -9,6 +9,7 @@ import 'package:digi_vegetable/ui/auth/register/register.dart';
 import 'package:digi_vegetable/ui/auth/register/register_details.dart';
 import 'package:digi_vegetable/ui/auth/register/register_greeting.dart';
 import 'package:digi_vegetable/ui/auth/register/register_otp.dart';
+import 'package:digi_vegetable/ui/dash_board/dash_board.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import '../on_boarding/on_boarding.dart';
@@ -45,11 +46,12 @@ class RoutesManager {
         return PageTransition(child: const ForgetPassword(), type: PageTransitionType.fade,duration: const Duration(milliseconds: 300));
       case AppRoute.otp:
         return PageTransition(child: const OTP(), type: PageTransitionType.fade,duration: const Duration(milliseconds: 300));
-
       case AppRoute.setNewPassword:
         return PageTransition(child: const SetNewPassword(), type: PageTransitionType.fade,duration: const Duration(milliseconds: 300));
       case AppRoute.changePassGreeting:
         return PageTransition(child: const PasswordChangeGreeting(), type: PageTransitionType.fade,duration: const Duration(milliseconds: 300));
+      case AppRoute.dashBoard:
+        return PageTransition(child: const DashBoard(), type: PageTransitionType.fade,duration: const Duration(milliseconds: 300));
       default:
         return MaterialPageRoute(
             builder: (context) => const Material(

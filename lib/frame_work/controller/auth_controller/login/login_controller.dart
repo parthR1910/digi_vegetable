@@ -1,8 +1,12 @@
 
+import 'package:digi_vegetable/ui/app_routes/app_routes.dart';
+import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
 final logInController = ChangeNotifierProvider((ref) => LoginController());
 class LoginController extends ChangeNotifier{
+
+  bool isLoading = false;
 
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
@@ -14,9 +18,15 @@ class LoginController extends ChangeNotifier{
     notifyListeners();
   }
 
-  loginButton(){
+  loginButton(BuildContext context)async{
     if(loginKey.currentState!.validate()){
-      print("you have login in");
+       isLoading = true;
+       notifyListeners();
+       await Future.delayed(const Duration(seconds: 2));
+       isLoading= false;
+       // ignore: use_build_context_synchronously
+       context.pushAndRemoveUntilNamed(AppRoute.dashBoard);
+      // print("you have login in");
     }
     notifyListeners();
   }

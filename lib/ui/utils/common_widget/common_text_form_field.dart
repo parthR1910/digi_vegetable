@@ -13,6 +13,7 @@ class CommonTextFormField extends StatelessWidget {
   final double? fontSize;
   final bool readOnly;
   final bool? obscureText;
+  final Color? fillColor;
   final TextEditingController? controller;
   final FocusNode? focusNode;
   final List<TextInputFormatter>? inputFormatters;
@@ -37,7 +38,7 @@ class CommonTextFormField extends StatelessWidget {
       this.keyboardType,
       this.suffixStyle,
       this.validator,
-      this.onTap, this.prefixIcon, this.onChanged, this.maxLength});
+      this.onTap, this.prefixIcon, this.onChanged, this.maxLength, this.fillColor});
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +70,7 @@ class CommonTextFormField extends StatelessWidget {
         suffixStyle: suffixStyle ??
             TextStyles.w500.copyWith(fontSize: 16.sp, color: AppColors.primary),
         prefixIcon: prefixIcon,
-        fillColor: AppColors.textFieldBackgroundColor,
+        fillColor:fillColor?? AppColors.textFieldBackgroundColor,
         contentPadding: EdgeInsets.only(left: 16.w, top: 16.h, bottom: 15.h),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
