@@ -9,6 +9,7 @@ import 'package:digi_vegetable/ui/utils/theme/app_assets.dart';
 import 'package:digi_vegetable/ui/utils/theme/app_colors.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
+import '../../../utils/theme/app_string.dart';
 import '../../../utils/theme/text_styles.dart';
 
 class LoginForm extends StatelessWidget {
@@ -18,6 +19,7 @@ class LoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Consumer(builder: (context, ref, child) {
       final loginWatch = ref.watch(logInController);
+      final  appStringWatch = ref.watch(appStringController);
       return Form(
         key: loginWatch.loginKey,
         child: Column(
@@ -25,14 +27,14 @@ class LoginForm extends StatelessWidget {
             CommonTextFormField(
               controller: loginWatch.emailController,
               keyboardType: TextInputType.emailAddress,
-              hintText: "Email Address",
+              hintText: appStringWatch.emailAddressKey,
               validator: emailValidator,
               prefixIcon: Image.asset(AppAssets.emailIcon,scale: 18,).paddingOnly(left: 5.w),
             ),
             SizedBox(height: 10.h,),
             CommonTextFormField(
               controller: loginWatch.passwordController,
-              hintText: "Password",
+              hintText: appStringWatch.passwordKey,
               validator: passValidator,
               prefixIcon: Image.asset(AppAssets.passWordIcon,scale: 18,).paddingOnly(left: 5.w),
             ),
@@ -47,12 +49,12 @@ class LoginForm extends StatelessWidget {
                      loginWatch.updateCheckboxSelected(val!);
                    }),
                    SizedBox(width: 5.w,),
-                   Text("Remember me",style: TextStyles.w500.copyWith(fontSize: 12.sp,color: AppColors.hintTextColor),)
+                   Text(appStringWatch.rememberMeKey,style: TextStyles.w500.copyWith(fontSize: 12.sp,color: AppColors.hintTextColor),)
                  ],
                ),
                TextButton(onPressed: (){
                  context.pushNamed(AppRoute.forgetPassword);
-               }, child:  Text("Forgot Password?",style:TextStyles.w500.copyWith(fontSize: 12.sp,color: AppColors.primary,))
+               }, child:  Text("${appStringWatch.forgetPassKey}?",style:TextStyles.w500.copyWith(fontSize: 12.sp,color: AppColors.primary,))
                )],
             ),
             SizedBox(height: 40.h,),

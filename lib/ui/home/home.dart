@@ -1,3 +1,4 @@
+import 'package:digi_vegetable/ui/app_routes/app_routes.dart';
 import 'package:digi_vegetable/ui/home/helper/home_categoried.dart';
 import 'package:digi_vegetable/ui/home/helper/home_most_popular/home_most_popular.dart';
 import 'package:digi_vegetable/ui/home/helper/home_new_arrival/home_new_arrival.dart';
@@ -5,6 +6,7 @@ import 'package:digi_vegetable/ui/home/helper/home_searchbar.dart';
 import 'package:digi_vegetable/ui/home/helper/home_slider.dart';
 import 'package:digi_vegetable/ui/home/helper/offerbanners/offer_banners.dart';
 import 'package:digi_vegetable/ui/home/helper/top_category/top_category.dart';
+import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
 import 'package:digi_vegetable/ui/utils/theme/app_assets.dart';
 import 'package:digi_vegetable/ui/utils/theme/app_colors.dart';
 
@@ -25,7 +27,9 @@ class Home extends StatelessWidget {
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.resolveWith((states) => AppColors.textFieldBackgroundColor),
             ),
-              onPressed: (){},
+              onPressed: (){
+              context.pushNamed(AppRoute.wishList);
+              },
               // icon: Image.asset(AppAssets.heartIcon)
               icon: const Icon(Icons.favorite_border,size: 28,)
           ),
@@ -34,7 +38,9 @@ class Home extends StatelessWidget {
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.resolveWith((states) => AppColors.textFieldBackgroundColor),
               ),
-              onPressed: (){}, icon: Image.asset(AppAssets.notificationIcon,height: 28.h,width: 28.w,))
+              onPressed: (){
+                context.pushNamed(AppRoute.notification);
+              }, icon: Image.asset(AppAssets.notificationIcon,height: 28.h,width: 28.w,))
         ],
       ),
       body: _bodyWidget(),

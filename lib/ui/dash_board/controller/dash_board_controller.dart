@@ -1,3 +1,4 @@
+import 'package:digi_vegetable/ui/category/category.dart';
 import 'package:digi_vegetable/ui/home/home.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
@@ -8,7 +9,7 @@ class DashBoardController extends ChangeNotifier{
 
   List<Widget> pages = [
     const Home(),
-    Container(),
+    const Category(),
     Container(),
     Container(),
     Container(),

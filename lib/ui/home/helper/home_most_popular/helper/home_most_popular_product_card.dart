@@ -1,10 +1,10 @@
-import 'package:digi_vegetable/frame_work/controller/home_controller/filter_controller/most_pupular_filter_controller.dart';
+import 'package:digi_vegetable/frame_work/controller/most_popular_controller/most_pupular_controller.dart';
 import 'package:digi_vegetable/ui/utils/common_widget/common_product_card.dart';
 import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
-class MostPopularProductCard extends StatelessWidget {
-  const MostPopularProductCard({super.key});
+class HomeMostPopularProductCard extends StatelessWidget {
+  const HomeMostPopularProductCard({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -6,12 +6,15 @@ import 'package:digi_vegetable/ui/utils/common_widget/common_button.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
 import '../../../utils/theme/app_assets.dart';
+import '../../../utils/theme/app_string.dart';
 
 class PasswordChangeGreeting extends ConsumerWidget {
   const PasswordChangeGreeting({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+      final  appStringWatch = ref.watch(appStringController);
+
     return Scaffold(
       body: Center(
         child: Column(
@@ -24,12 +27,12 @@ class PasswordChangeGreeting extends ConsumerWidget {
             ),
             SizedBox(height: 30.h),
             Text(
-              'Password Changed',
+              appStringWatch.passChangedKey,
               style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w600),
             ),
             SizedBox(height: 15.h),
             Text(
-              'Your password has been changed \nsuccessfully',
+              appStringWatch.passSucChangeSubtitleKey,
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 14.sp, color: Colors.grey),
             ),
@@ -41,7 +44,7 @@ class PasswordChangeGreeting extends ConsumerWidget {
                 onTap: () {
                   context.pushAndRemoveUntilNamed(AppRoute.login);
                 },
-                btnText: 'Back To Login')
+                btnText: appStringWatch.backToLoginKey)
           ],
         ).paddingHorizontal(20.w),
       ),

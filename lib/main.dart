@@ -1,13 +1,26 @@
+import 'package:digi_vegetable/frame_work/repository/services/shared_pref_service/share_pref_service.dart';
 import 'package:digi_vegetable/ui/app_routes/app_routes.dart';
 import 'package:digi_vegetable/ui/app_routes/route_manager.dart';
 import 'package:digi_vegetable/ui/utils/theme/app_colors.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/services.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent, statusBarIconBrightness: Brightness.dark));
-  runApp(const ProviderScope(child: MyApp()));
+   await SharePrefService.prefService.init();
+
+
+  runApp( ProviderScope(child: EasyLocalization(
+        supportedLocales:const [
+          Locale('en'),
+        ],
+      path: 'assets/lang',
+      useOnlyLangCode: true,
+      startLocale: const Locale('en'),
+      child: const MyApp())));
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +28,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       minTextAdapt: true,
@@ -26,9 +38,12 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
           useMaterial3: true,
         ),
+        supportedLocales: EasyLocalization.of(context)!.supportedLocales,
+        locale: EasyLocalization.of(context)!.locale,
+        localizationsDelegates: context.localizationDelegates,
         onGenerateRoute: RoutesManager.onGenerateRoutes,
-        initialRoute: AppRoute.splash,
-        // home: const CommonProductCard(),
+        initialRoute: AppRoute.review,
+        // home: const Home(),
       ),
     );
   }

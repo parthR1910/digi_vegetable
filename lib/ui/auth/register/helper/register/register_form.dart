@@ -7,6 +7,8 @@ import 'package:digi_vegetable/ui/utils/form_validation.dart';
 import 'package:digi_vegetable/ui/utils/theme/app_assets.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
+import '../../../../utils/theme/app_string.dart';
+
 class RegisterForm extends StatelessWidget {
   const RegisterForm({super.key});
 
@@ -14,20 +16,22 @@ class RegisterForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Consumer(builder: (context, ref, child) {
       final loginWatch = ref.watch(registerController);
+      final  appStringWatch = ref.watch(appStringController);
       return Form(
         key: loginWatch.registerKey,
         child: Column(
           children: [
             CommonTextFormField(
               controller: loginWatch.emailController,
-              hintText: "Email Address",
+              hintText:appStringWatch.emailAddressKey,
+              keyboardType: TextInputType.emailAddress,
               validator: emailValidator,
               prefixIcon: Image.asset(AppAssets.emailIcon,scale: 18,).paddingOnly(left: 5.w),
             ),
             SizedBox(height: 10.h,),
             CommonTextFormField(
               controller: loginWatch.passwordController,
-              hintText: "Password",
+              hintText: appStringWatch.passwordKey,
               validator: passValidator,
               prefixIcon: Image.asset(AppAssets.passWordIcon,scale: 18,).paddingOnly(left: 5.w),
             ),
@@ -48,12 +52,12 @@ class RegisterForm extends StatelessWidget {
                       style: DefaultTextStyle.of(context).style,
                       children: <TextSpan>[
                         TextSpan(
-                          text: 'I agree with the',
+                          text: appStringWatch.iAgreeWithKey,
                           style: TextStyle(
                               color: Colors.grey, fontSize: 14.sp, height: 2),
                         ),
                         TextSpan(
-                          text: ' Terms of service', // Second word
+                          text: " ${appStringWatch.termsOfServiceKey}", // Second word
                           style: TextStyle(
                             color: context.colorScheme
                                 .primary, // Brown color for the second word
@@ -61,7 +65,7 @@ class RegisterForm extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                            text: ' & privacy policy',
+                            text: ' ${appStringWatch.privacyPolicyKey}',
                             style: TextStyle(
                               color: Colors.grey,
                               fontSize: 14.sp,

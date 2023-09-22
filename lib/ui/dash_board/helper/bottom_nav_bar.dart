@@ -29,7 +29,7 @@ class BottomNavBar extends ConsumerWidget {
             BottomNavigationBarItem(
                 icon: icon(AppAssets.categoryIcon),
                 activeIcon: icon(AppAssets.categoryActiveIcon),
-                label: 'Product'),
+                label: 'Category'),
             BottomNavigationBarItem(
                 icon: icon(AppAssets.basketIcon),
                 activeIcon: icon(AppAssets.basketActiveIcon),

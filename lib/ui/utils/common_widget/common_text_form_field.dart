@@ -57,6 +57,7 @@ class CommonTextFormField extends StatelessWidget {
       obscureText: obscureText!,
       style: TextStyles.w500.copyWith(color: AppColors.black, fontSize: 16.sp),
       decoration: InputDecoration(
+
         counterText: "",
         filled: true,
         hintText: hintText,
@@ -64,14 +65,14 @@ class CommonTextFormField extends StatelessWidget {
             TextStyles.w500.copyWith(
                 fontSize: fontSize ?? 16.sp, color: AppColors.textGreyColor),
         suffixIcon: Padding(
-          padding: EdgeInsets.only(right: 16.w, top: 15.h, bottom: 15.h),
+          padding: EdgeInsets.only(right: 10.w,),
           child: suffixIcon,
         ),
         suffixStyle: suffixStyle ??
             TextStyles.w500.copyWith(fontSize: 16.sp, color: AppColors.primary),
         prefixIcon: prefixIcon,
         fillColor:fillColor?? AppColors.textFieldBackgroundColor,
-        contentPadding: EdgeInsets.only(left: 16.w, top: 16.h, bottom: 15.h),
+        // contentPadding: EdgeInsets.only(left: 16.w, top: 16.h, bottom: 15.h),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
             borderSide: const BorderSide(

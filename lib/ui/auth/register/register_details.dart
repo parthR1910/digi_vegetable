@@ -5,6 +5,7 @@ import 'package:digi_vegetable/ui/utils/theme/app_colors.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
 import '../../utils/theme/app_assets.dart';
+import '../../utils/theme/app_string.dart';
 import '../../utils/theme/text_styles.dart';
 
 class RegisterDetails extends ConsumerWidget {
@@ -13,13 +14,15 @@ class RegisterDetails extends ConsumerWidget {
   @override
   Widget build(BuildContext context,WidgetRef ref) {
     final registerDetailsWatch = ref.watch(registerDetailsController);
+    final  appStringWatch = ref.watch(appStringController);
+
     return  CommonLoading(
       show:registerDetailsWatch.isLoading,
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
           automaticallyImplyLeading: false,
-          title: Text("Sign Up",style: TextStyles.w600.copyWith(fontSize: 28.sp,color: AppColors.black),),
+          title: Text(appStringWatch.signUpKey,style: TextStyles.w600.copyWith(fontSize: 28.sp,color: AppColors.black),),
         ),
         body: Padding(
           padding:  EdgeInsets.symmetric(horizontal: 16.w,vertical: 10.h),
@@ -56,7 +59,7 @@ class RegisterDetails extends ConsumerWidget {
                             ],
                           )),
                       SizedBox(height: 10.h,),
-                      Text("Upload Image",style: TextStyles.w600.copyWith(fontSize: 16.sp,color: AppColors.black),),
+                      Text(appStringWatch.uploadImageKey,style: TextStyles.w600.copyWith(fontSize: 16.sp,color: AppColors.black),),
                       SizedBox(height: 30.h,),
                       const RegisterDetailsForm(),
                     ],

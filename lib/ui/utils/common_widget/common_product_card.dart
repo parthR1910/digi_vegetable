@@ -1,4 +1,4 @@
-import 'package:digi_vegetable/frame_work/controller/home_controller/filter_controller/most_pupular_filter_controller.dart';
+import 'package:digi_vegetable/frame_work/controller/most_popular_controller/most_pupular_controller.dart';
 import 'package:digi_vegetable/ui/utils/common_widget/common_button.dart';
 import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
 import 'package:digi_vegetable/ui/utils/extension/widget_extension.dart';
@@ -8,7 +8,7 @@ import 'package:digi_vegetable/ui/utils/theme/text_styles.dart';
 import '../theme/theme.dart';
 
 class CommonProductCard extends StatelessWidget {
-  final PopularProductData productData;
+  final ProductData productData;
   final void Function()? likeButton;
   final void Function(String)? onSelected;
   const CommonProductCard({super.key, required this.productData, this.likeButton, this.onSelected});
@@ -54,6 +54,7 @@ class CommonProductCard extends StatelessWidget {
           SizedBox(height: 5.h,),
           Text(productData.name,style: TextStyles.w600.copyWith(fontSize: 12.sp,color: AppColors.black),),
           Text("\$${productData.price}/kg",style: TextStyles.w700.copyWith(fontSize: 14.sp,color: AppColors.black),),
+          SizedBox(height: 3.h,),
           Row(
             children: [
               Expanded(

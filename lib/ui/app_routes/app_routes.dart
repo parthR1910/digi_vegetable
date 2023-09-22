@@ -13,4 +13,12 @@ class AppRoute{
   static const String setNewPassword = "setNewPassword";
   static const String changePassGreeting = "changePassGreeting";
   static const String dashBoard = "dashBoard";
+  static const String wishList = "wishList";
+  static const String search = "search";
+  static const String notification = "notification";
+  static const String filter = "filter";
+  static const String categorySelection = "categorySelection";
+  static const String productDetail = "productDetail";
+  static const String mostPopular = "mostPopular";
+  static const String review = "review";
 }

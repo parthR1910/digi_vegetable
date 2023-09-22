@@ -7,7 +7,7 @@ extension ContextExt on BuildContext {
 
   void pop() => Navigator.pop(this);
 
-  void pushNamed(String route) => Navigator.pushNamed(this, route);
+  void pushNamed(String route,{dynamic arg}) => Navigator.pushNamed(this, route,arguments: arg);
 
   void pushAndRemoveUntilNamed(String route) =>
       Navigator.pushNamedAndRemoveUntil(this, route, (route) => false);

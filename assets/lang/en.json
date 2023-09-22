@@ -1,0 +1,63 @@
+{
+    "skipKey": "Skip",
+    "onBoardTitle1": "Find the item you've been looking for",
+    "onBoardSubtitle1": "Here you'll see rich varieties of goods, carefully classified for seamless browsing experience.",
+    "onBoardTitle2": "Get those shopping bags filled",
+    "onBoardSubtitle2": "Add any item you want to your cart, or save it on your wishlist, so you don't miss it in your future purchases.",
+    "onBoardTitle3": "Fast & secure payment",
+    "onBoardSubtitle3": "There are many payment options available for your ease.",
+    "nextKey": "Next",
+
+    "signInKey": "Sign In",
+    "signUpKey": "Sign Up",
+
+    "welcomeComeKey": "Welcome back!",
+    "loginSubtitleKey": "Log in with your data that you intered during your registration.",
+    "emailAddressKey": "Email address",
+    "passwordKey": "Password",
+    "rememberMeKey": "Remember Me",
+    "forgetPassKey": "Forget Password",
+    "doNotHaveAccountKey": "Don't have an account?",
+
+    "passwordRecoveryKey": "Password Recovery",
+    "recoveryPassSubtitle": "Enter your mail to recover your password.",
+    "verificationCodeKey": "Verification code",
+    "verificationSubtitleKey": "We have sent the code verification to",
+    "changeYourEmailKey": "Change Your Email",
+    "resendKey": "Resend",
+    "confirmKey": "Confirm",
+
+    "setNewPassKey": "Set New Password",
+    "setNewPassSubtitle": "Your new password must be different from previous password.",
+    "enterNewPassKey": "Enter New Password",
+    "confirmPassKey": "Confirm Password",
+    "changePassKey": "Change Password",
+
+    "passChangedKey": "Password Changed!",
+    "passSucChangeSubtitleKey": "Your password has been changed successfully.",
+    "backToLoginKey": "Back to Login",
+
+    "letGetStartedKey": "Let's get started!",
+    "signUpSubtitleKey": "Please enter your valid data in order to create an account.",
+    "iAgreeWithKey": "I agree with the",
+    "termsOfServiceKey": "Terms of service",
+    "privacyPolicyKey": "& privacy policy",
+    "doYouHaveAccountKey": "Do you have an account?",
+    "otpVerificationKey": "OTP Verification",
+
+    "uploadImageKey": "Upload Image",
+    "fullName": "Full name",
+    "dateOfBirthKey": "Date of birth",
+    "phoneNumberKey": "Phone Number",
+    "continueKey": "Continue",
+
+
+    "searchKey": "Search",
+    "seeAllKey": "See All",
+    "specialOfferKey": "Special Offers",
+    "mostPopularKey": "Most Popular",
+    "offKey": "Off",
+    "topCategoriesKey": "Top Categories",
+    "newArrivalKey": "New Arrival",
+    "addKey": "Add"
+}

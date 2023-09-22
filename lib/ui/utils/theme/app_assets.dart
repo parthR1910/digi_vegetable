@@ -27,6 +27,12 @@ class AppAssets {
   static const String notificationIcon = 'assets/images/NotificationIcon.png';
   static const String filterIcon = 'assets/images/filterIcon.png';
   static const String searchIcon = 'assets/images/SearchIcon.png';
+  static const String locationIcon = 'assets/images/Location.png';
+  static const String discountIcon = 'assets/images/Discount.png';
+  static const String creditCardIcon = 'assets/images/creditCardIcon.png';
+  static const String shareIcon = 'assets/images/share.png';
+  static const String heartInactiveIcon = 'assets/images/HeartInactive.png';
+  static const String heartActiveIcon = 'assets/images/HeartActive.png';
 
 
 

@@ -6,11 +6,14 @@ import 'package:digi_vegetable/ui/utils/theme/app_colors.dart';
 import 'package:digi_vegetable/ui/app_routes/app_routes.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
-class AuthIntro extends StatelessWidget {
+import '../../utils/theme/app_string.dart';
+
+class AuthIntro extends ConsumerWidget {
   const AuthIntro({super.key,});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context,WidgetRef ref) {
+    final appStringWatch = ref.watch(appStringController);
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
@@ -32,10 +35,10 @@ class AuthIntro extends StatelessWidget {
           ),
           CommonButton(onTap: (){
             context.pushNamed(AppRoute.login);
-          }, btnText: "Sign in",height: 55.h,).paddingHorizontal(10.w),
+          }, btnText: appStringWatch.signInKey,height: 55.h,).paddingHorizontal(10.w),
           CommonButton(onTap: (){
             context.pushNamed(AppRoute.register);
-          }, btnText: "Sign Up",
+          }, btnText: appStringWatch.signUpKey,
             backgroundColor: AppColors.white,
             txtColor: AppColors.primary,
             border: Border.all(color: AppColors.primary,width: 1.5.w),

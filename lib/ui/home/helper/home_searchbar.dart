@@ -1,13 +1,17 @@
+import 'package:digi_vegetable/ui/app_routes/app_routes.dart';
+import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
 import 'package:digi_vegetable/ui/utils/theme/app_assets.dart';
+import 'package:digi_vegetable/ui/utils/theme/app_string.dart';
 import '../../utils/theme/app_colors.dart';
 import '../../utils/theme/text_styles.dart';
 import '../../utils/theme/theme.dart';
 
-class HomeSearchBar extends StatelessWidget {
+class HomeSearchBar extends ConsumerWidget {
   const HomeSearchBar({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context,WidgetRef ref) {
+    final appStringWatch = ref.watch(appStringController);
     return Padding(
       padding: EdgeInsets.only(
         top: 15.h,
@@ -17,7 +21,9 @@ class HomeSearchBar extends StatelessWidget {
       child: Column(
         children: [
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              context.pushNamed(AppRoute.search);
+            },
             child: Container(
               padding: EdgeInsets.symmetric(vertical: 3.h, horizontal: 7.w),
               decoration: BoxDecoration(
@@ -32,10 +38,12 @@ class HomeSearchBar extends StatelessWidget {
                         height: 26.h,
                         width: 26.w,
                       )),
-                  Text("Search",style: TextStyles.w400.copyWith(fontSize: 18.sp,color: AppColors.hintTextColor),),
+                  Text(appStringWatch.searchKey,style: TextStyles.w400.copyWith(fontSize: 18.sp,color: AppColors.hintTextColor),),
                   const Spacer(),
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        context.pushNamed(AppRoute.filter);
+                      },
                       icon: Image.asset(
                         AppAssets.filterIcon,
                         height: 26.h,
@@ -52,7 +60,7 @@ class HomeSearchBar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Special Offers",
+               appStringWatch.specialOfferKey,
                 style: TextStyles.w800
                     .copyWith(fontSize: 16.sp, color: AppColors.black),
               ),
@@ -60,7 +68,7 @@ class HomeSearchBar extends StatelessWidget {
               TextButton(
                   onPressed: () {},
                   child: Text(
-                    "See All",
+                    appStringWatch.seeAllKey,
                     style: TextStyles.w600
                         .copyWith(fontSize: 14.sp, color: AppColors.black),
                   ))

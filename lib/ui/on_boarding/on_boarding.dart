@@ -3,24 +3,29 @@ import 'package:digi_vegetable/ui/on_boarding/helper/intro_bottom_button.dart';
 import 'package:digi_vegetable/ui/on_boarding/helper/intro_page_view.dart';
 import 'package:digi_vegetable/ui/utils/theme/app_assets.dart';
 import 'package:digi_vegetable/ui/utils/theme/app_colors.dart';
+import 'package:digi_vegetable/ui/utils/theme/app_string.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
 import '../utils/theme/text_styles.dart';
 
-class OnBoarding extends StatelessWidget {
+class OnBoarding extends ConsumerWidget {
   const OnBoarding({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context,WidgetRef ref) {
     return Scaffold(
+      backgroundColor: AppColors.white,
       appBar: AppBar(
+        backgroundColor: AppColors.white,
         actions: [
           GestureDetector(
-              onTap: () {},
+              onTap: () {
+                ref.watch(onBoardingController).skipButton(context);
+              },
               child: Padding(
                 padding: EdgeInsets.only(right: 10.w),
                 child: Text(
-                  "Skip",
+                  ref.watch(appStringController).skipKey,
                   style: TextStyles.w400
                       .copyWith(fontSize: 18, color: AppColors.black),
                 ),
@@ -34,6 +39,7 @@ class OnBoarding extends StatelessWidget {
   get _bodyWidget => Consumer(
         builder: (context, ref, child) {
           final onBoardWatch = ref.watch(onBoardingController);
+          final appStringWatch = ref.watch(appStringController);
           return Center(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -44,24 +50,21 @@ class OnBoarding extends StatelessWidget {
                     onPageChanged:(val){
                       onBoardWatch.onPageChange(val);
                     },
-                    children: const [
+                    children:  [
                       IntroPageView(model: (
                       img: AppAssets.onBoardImg1,
-                      title: "Find the item you've been looking for",
-                      subtile:
-                      "Here you'll see rich varieties of goods, carefully classified for seamless browsing experience."
+                      title: appStringWatch.onBoardTitle1,
+                      subtile: appStringWatch.onBoardSubtitle1
                       )),
                       IntroPageView(model: (
                       img: AppAssets.onBoardImg2,
-                      title: "Get those shopping bags filled",
-                      subtile:
-                      "Add any item you want to your cart, or save it on your wishlist, so you don't miss it in your future purchases."
+                      title: appStringWatch.onBoardTitle2,
+                      subtile: appStringWatch.onBoardSubtitle2
                       )),
                       IntroPageView(model: (
                       img: AppAssets.onBoardImg3,
-                      title: "Fast & secure payment",
-                      subtile:
-                      "There are many payment options available for your ease."
+                      title: appStringWatch.onBoardTitle3,
+                      subtile: appStringWatch.onBoardSubtitle3
                       )),
                     ],
                   ),
