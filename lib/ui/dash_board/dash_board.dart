@@ -1,4 +1,4 @@
-import 'package:digi_vegetable/ui/dash_board/helper/bottom_nav_bar.dart';
+import 'package:digi_vegetable/ui/dash_board/helper/dashboard_bottom_nav_bar.dart';
 import '../utils/theme/theme.dart';
 import 'controller/dash_board_controller.dart';
 
@@ -14,7 +14,7 @@ class DashBoard extends ConsumerWidget {
         index: dashBoardWatch.selectedIndex,
         children: dashBoardWatch.pages,
       ),
-      bottomNavigationBar: const BottomNavBar(),
+      bottomNavigationBar: const DashBoardBottomNavBar(),
     );
   }
 }

@@ -1,9 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:digi_vegetable/frame_work/controller/product_detail_controller.dart';
 import 'package:digi_vegetable/ui/utils/common_widget/common_appbar.dart';
 import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
 import 'package:digi_vegetable/ui/utils/extension/widget_extension.dart';
 
+import '../../../frame_work/controller/product_detail_controller/product_detail_controller.dart';
 import '../../utils/theme/app_assets.dart';
 import '../../utils/theme/theme.dart';
 

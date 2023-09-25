@@ -1,7 +1,6 @@
-import 'package:digi_vegetable/frame_work/controller/product_detail_controller.dart';
-import 'package:digi_vegetable/frame_work/controller/product_filter/product_filter_controller.dart';
 import 'package:digi_vegetable/ui/utils/extension/widget_extension.dart';
 
+import '../../../frame_work/controller/product_detail_controller/product_detail_controller.dart';
 import '../../utils/theme/app_colors.dart';
 import '../../utils/theme/text_styles.dart';
 import '../../utils/theme/theme.dart';
@@ -64,13 +63,13 @@ class ProductDetailForm extends ConsumerWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text("Quantity",style: TextStyles.w600.copyWith(fontSize: 16.sp,color: AppColors.black),),
-              FittedBox(
-                child: Container(
-                  width: 160.w,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.r),
-                      border: Border.all(color: Colors.grey.shade400,width: 1.5.w)
-                  ),
+              Container(
+                width: 160.w,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.r),
+                    border: Border.all(color: Colors.grey.shade400,width: 1.5.w)
+                ),
+                child: FittedBox(
                   child: Row(
                     children: [
                       TextButton(onPressed: (){
@@ -81,8 +80,8 @@ class ProductDetailForm extends ConsumerWidget {
                         productDetailWatch.addQuantity();
                       }, child: Text("+",style: TextStyles.w500.copyWith(fontSize: 25.sp,color: Colors.black),))
                     ],
-                  ).paddingOnly(top: 3.h,bottom: 3.h,left: 8.w,right: 8.w),
-                ),
+                  ),
+                ).paddingOnly(top: 3.h,bottom: 3.h,left: 8.w,right: 8.w),
               ),
             ],
           ),

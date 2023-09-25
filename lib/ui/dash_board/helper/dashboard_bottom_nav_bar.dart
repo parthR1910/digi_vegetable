@@ -3,8 +3,8 @@ import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
 import '../../utils/theme/app_assets.dart';
 import '../../utils/theme/theme.dart';
 
-class BottomNavBar extends ConsumerWidget {
-  const BottomNavBar({super.key});
+class DashBoardBottomNavBar extends ConsumerWidget {
+  const DashBoardBottomNavBar({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

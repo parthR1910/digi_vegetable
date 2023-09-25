@@ -9,14 +9,17 @@ import 'package:digi_vegetable/ui/auth/register/register.dart';
 import 'package:digi_vegetable/ui/auth/register/register_details.dart';
 import 'package:digi_vegetable/ui/auth/register/register_greeting.dart';
 import 'package:digi_vegetable/ui/auth/register/register_otp.dart';
+import 'package:digi_vegetable/ui/check_out/check_out.dart';
 import 'package:digi_vegetable/ui/dash_board/dash_board.dart';
 import 'package:digi_vegetable/ui/most_popular/most_popular.dart';
 import 'package:digi_vegetable/ui/notification/notification.dart';
+import 'package:digi_vegetable/ui/payment_method/payment_method.dart';
 import 'package:digi_vegetable/ui/product_detail/product_detail.dart';
 import 'package:digi_vegetable/ui/product_filter/filter.dart';
 import 'package:digi_vegetable/ui/product_filter/helper/category_filter/category_selection.dart';
 import 'package:digi_vegetable/ui/reviews/reviews.dart';
 import 'package:digi_vegetable/ui/search/search.dart';
+import 'package:digi_vegetable/ui/shipping_address/shipping_address.dart';
 import 'package:digi_vegetable/ui/wish_list/wish_list.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -81,6 +84,12 @@ class RoutesManager {
         return PageTransition(child: const MostPopular(), type: PageTransitionType.fade,duration: const Duration(milliseconds: 300));
       case AppRoute.review:
         return PageTransition(child: const Reviews(), type: PageTransitionType.fade,duration: const Duration(milliseconds: 300));
+      case AppRoute.checkOut:
+        return PageTransition(child: const CheckOut(), type: PageTransitionType.fade,duration: const Duration(milliseconds: 300));
+      case AppRoute.shippingAddress:
+        return PageTransition(child: const ShippingAddress(), type: PageTransitionType.fade,duration: const Duration(milliseconds: 300));
+      case AppRoute.paymentMethod:
+        return PageTransition(child: const PaymentMethod(), type: PageTransitionType.fade,duration: const Duration(milliseconds: 300));
 
       default:
         return MaterialPageRoute(

@@ -13,8 +13,10 @@ class CommonButton extends StatelessWidget {
   final double? fontSize;
   final Color? backgroundColor;
   final BoxBorder? border;
+  final bool fittedWidth;
+  final EdgeInsetsGeometry? padding;
 
-  const CommonButton({super.key, required this.onTap, required this.btnText, this.txtColor, this.height, this.width, this.borderRadius, this.fontSize, this.backgroundColor, this.border});
+  const CommonButton({super.key, required this.onTap, required this.btnText, this.txtColor, this.height, this.width, this.borderRadius, this.fontSize, this.backgroundColor, this.border,this.fittedWidth = false, this.padding});
 
   @override
   Widget build(BuildContext context) {
@@ -23,14 +25,15 @@ class CommonButton extends StatelessWidget {
       onTap:onTap,
       child: Ink(
         height:height?? 50.h,
-        width:width?? context.screenWidth,
+        padding: padding,
+        width:fittedWidth? null: width?? context.screenWidth,
         decoration: BoxDecoration(
             color:backgroundColor?? AppColors.primary,
             borderRadius: BorderRadius.circular(borderRadius ?? 16.r),
             border: border
         ),
         child: Container(
-          alignment: Alignment.center,
+           alignment: Alignment.center,
           child: Text(btnText, style: TextStyles.w600.copyWith(
               fontSize:fontSize?? 18, color:txtColor?? AppColors.white),),
         ),

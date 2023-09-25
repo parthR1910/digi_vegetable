@@ -33,6 +33,10 @@ class AppAssets {
   static const String shareIcon = 'assets/images/share.png';
   static const String heartInactiveIcon = 'assets/images/HeartInactive.png';
   static const String heartActiveIcon = 'assets/images/HeartActive.png';
+  static const String deleteIcon = 'assets/images/DeleteIcon.png';
+  static const String shippingCargoIcon = 'assets/images/ShippingCargo.png';
+  static const String cashOnDeliveryIcon = 'assets/images/CashOnDelivery.png';
+  static const String moneyTransferIcon = 'assets/images/MoneyTransfer.png';
 
 
 

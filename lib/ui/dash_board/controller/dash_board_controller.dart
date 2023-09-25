@@ -2,15 +2,20 @@ import 'package:digi_vegetable/ui/category/category.dart';
 import 'package:digi_vegetable/ui/home/home.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
-final dashBoardController = ChangeNotifierProvider((ref) => DashBoardController());
+import '../../my_cart/my_cart.dart';
+
+final dashBoardController = ChangeNotifierProvider((ref) => DashBoardController(ref));
 
 class DashBoardController extends ChangeNotifier{
+  Ref ref;
+  DashBoardController(this.ref);
+
   int selectedIndex = 0;
 
   List<Widget> pages = [
     const Home(),
     const Category(),
-    Container(),
+    const MyCart(),
     Container(),
     Container(),
   ];
@@ -18,4 +23,22 @@ class DashBoardController extends ChangeNotifier{
   updateSelectedIndex(int pageIndex){
     selectedIndex = pageIndex;
     notifyListeners();
-  }}
+  }
+
+  setPageInit(int index){
+    switch(index){
+      case 0:
+        // ref.read(homeController).
+        break;
+      case 1:
+        /// call init here
+        break;
+      case 2:
+      /// call init here
+        break;
+      case 4:
+      /// call init here
+        break;
+    }
+  }
+}

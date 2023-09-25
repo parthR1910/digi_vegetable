@@ -1,4 +1,3 @@
-import 'package:digi_vegetable/frame_work/controller/product_filter/product_filter_controller.dart';
 import 'package:digi_vegetable/ui/product_filter/helper/category_filter/category_filter.dart';
 import 'package:digi_vegetable/ui/product_filter/helper/filter_buttons.dart';
 import 'package:digi_vegetable/ui/product_filter/helper/price_range_filter.dart';
@@ -6,6 +5,7 @@ import 'package:digi_vegetable/ui/product_filter/helper/rating_by.dart';
 import 'package:digi_vegetable/ui/product_filter/helper/sort_by.dart';
 import 'package:digi_vegetable/ui/utils/common_widget/common_appbar.dart';
 
+import '../../frame_work/controller/product_filter_controller/product_filter_controller.dart';
 import '../utils/theme/theme.dart';
 
 class Filter extends ConsumerStatefulWidget {

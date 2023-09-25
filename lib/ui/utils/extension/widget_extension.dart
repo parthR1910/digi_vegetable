@@ -1,15 +1,8 @@
-
-
 import 'package:flutter/material.dart';
 
-extension WidgetExtension on Widget{
-  paddingAll(double value) => Padding(padding: EdgeInsets.all(value),child: this,);
-  paddingHorizontal(double val) =>
-      Padding(padding: EdgeInsets.symmetric(horizontal: val), child: this);
-  paddingVertical(double val) =>
-      Padding(padding: EdgeInsets.symmetric(vertical: val), child: this);
-  paddingSymmetric({required double horizontal, required double vertical}) =>
-      Padding(padding: EdgeInsets.symmetric(vertical: vertical,horizontal: horizontal), child: this);
+extension WidgetExtention on Widget {
+  paddingAll(double val) => Padding(padding: EdgeInsets.all(val), child: this);
+
   paddingOnly(
       {double left = 0,
         double right = 0,
@@ -23,8 +16,22 @@ extension WidgetExtension on Widget{
             bottom: bottom,
           ),
           child: this);
+  paddingHorizontal(double val) =>
+      Padding(padding: EdgeInsets.symmetric(horizontal: val), child: this);
+  paddingVertical(double val) =>
+      Padding(padding: EdgeInsets.symmetric(vertical: val), child: this);
+  paddingSymmetric({double vertical = 0, double horizontal = 0}) => Padding(
+      padding: EdgeInsets.symmetric(vertical: vertical, horizontal: horizontal),
+      child: this);
+  marginSymmetric({double vertical = 0, double horizontal = 0}) => Container(
+      margin: EdgeInsets.symmetric(vertical: vertical, horizontal: horizontal),
+      child: this);
 
-  marginOnly(
+  marginHorizontal(double val) =>
+      Container(margin: EdgeInsets.symmetric(horizontal: val), child: this);
+  marginVertical(double val) =>
+      Container(margin: EdgeInsets.symmetric(vertical: val), child: this);
+  Widget marginOnly(
       {double left = 0,
         double right = 0,
         double top = 0,

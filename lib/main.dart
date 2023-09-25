@@ -1,6 +1,7 @@
 import 'package:digi_vegetable/frame_work/repository/services/shared_pref_service/share_pref_service.dart';
 import 'package:digi_vegetable/ui/app_routes/app_routes.dart';
 import 'package:digi_vegetable/ui/app_routes/route_manager.dart';
+import 'package:digi_vegetable/ui/my_cart/my_cart.dart';
 import 'package:digi_vegetable/ui/utils/theme/app_colors.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -42,8 +43,8 @@ class MyApp extends StatelessWidget {
         locale: EasyLocalization.of(context)!.locale,
         localizationsDelegates: context.localizationDelegates,
         onGenerateRoute: RoutesManager.onGenerateRoutes,
-        initialRoute: AppRoute.review,
-        // home: const Home(),
+        initialRoute: AppRoute.paymentMethod,
+        // home: const MyCart(),
       ),
     );
   }
