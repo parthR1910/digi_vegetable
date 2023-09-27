@@ -1,6 +1,6 @@
 
 import '../../../ui/utils/theme/theme.dart';
-import '../most_popular_controller/most_pupular_controller.dart';
+import '../../repository/model/product_data.dart';
 
 final wishListController = ChangeNotifierProvider((ref)=>WishListController(ref));
 
@@ -28,7 +28,7 @@ class WishListController extends ChangeNotifier{
 
   getItemOfData(int index,String itemData){
     if(itemData.isNotEmpty){
-      wishList[index].items = itemData;
+      wishList[index].kg = itemData;
     }
     notifyListeners();
   }

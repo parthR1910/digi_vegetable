@@ -14,7 +14,19 @@ class AppAssets {
   static const String userImgPlaceholder = 'assets/images/userImgPlaceholder.png';
   static const String setNewPassImg = 'assets/images/setNewPasswordImg.png';
   static const String rocketImg = 'assets/images/rocket.png';
+  static const String emptyNoteImg = 'assets/images/emptyNoteImg.png';
 
+
+
+  ///payment icon
+
+  static const String razorPayIcon = 'assets/images/RazorpayIcon.png';
+  static const String payUIcon = 'assets/images/PayU.png';
+  static const String payPalIcon = 'assets/images/PayPalLogo.png';
+  static const String instamojoIcon = 'assets/images/instamojo.png';
+
+
+  static const String successCartLogoIcon = 'assets/images/SuccessCartLogo.png';
 
 
   ///Icons of the app
@@ -37,6 +49,10 @@ class AppAssets {
   static const String shippingCargoIcon = 'assets/images/ShippingCargo.png';
   static const String cashOnDeliveryIcon = 'assets/images/CashOnDelivery.png';
   static const String moneyTransferIcon = 'assets/images/MoneyTransfer.png';
+  static const String sendIcon = 'assets/images/Send.png';
+  static const String paperDownloadIcon = 'assets/images/PaperDownload.png';
+  static const String paperIcon = 'assets/images/paperIcon.jpg';
+  static const String shippingBoxIcon = 'assets/images/shippingBox.png';
 
 
 

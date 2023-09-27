@@ -25,10 +25,10 @@ class CheckOutTotalData extends StatelessWidget {
           final chargeData = chargesData[index];
           return TableRow(
             children: [
-              Text(chargeData.name,style: TextStyles.w400.copyWith(fontSize: 16.sp,color: AppColors.textGreyColor),),
+              Text(chargeData.name,style: TextStyles.w400.copyWith(fontSize: 14.sp,color: AppColors.textGreyColor),),
               Align(
                 alignment: Alignment.centerRight,
-                  child: Text(chargeData.price.toString(),style: TextStyles.w400.copyWith(fontSize: 16.sp,color: AppColors.black),)),
+                  child: Text(chargeData.price.toString(),style: TextStyles.w400.copyWith(fontSize: 14.sp,color: AppColors.black),)),
             ],
           );
         })

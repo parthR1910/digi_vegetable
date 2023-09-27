@@ -1,26 +1,30 @@
-import '../../../my_cart/helper/my_cart_bottom_sheet.dart';
-import '../../theme/app_assets.dart';
-import '../../theme/text_styles.dart';
-import '../../theme/theme.dart';
+import 'package:digi_vegetable/frame_work/repository/model/product_data.dart';
+import 'package:digi_vegetable/ui/utils/common_widget/common_tiles/mycart_checkout_common_tile/product_common_bottom_sheet.dart';
+
+import '../../../theme/app_assets.dart';
+import '../../../theme/text_styles.dart';
+import '../../../theme/theme.dart';
 
 class CommonProductCartTile extends StatelessWidget {
-  final String productImg;
-  final String name;
-  final String price;
-  final String kg;
-  final String quantity;
+  final ProductData productData;
+  // final String productImg;
+  // final String name;
+  // final String price;
+  // final String kg;
+  // final int quantity;
+  final int index;
   final void Function()? addQuantity;
   final void Function()? removeQuantity;
 
 
 
-  const CommonProductCartTile({super.key, required this.productImg, required this.name, required this.price, required this.kg, this.quantity = "0", this.addQuantity, this.removeQuantity});
+  const CommonProductCartTile({super.key, required this.productData, this.addQuantity, this.removeQuantity, required this.index});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 10.h),
-      padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
+      padding: EdgeInsets.symmetric(vertical: 4.h, horizontal: 10.w),
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(15.r),
@@ -29,10 +33,14 @@ class CommonProductCartTile extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
-            height: 100.h,
-            width: 100.w,
-            child: FittedBox(child: Image.asset(productImg)),
+          Container(
+            clipBehavior: Clip.hardEdge,
+            height: 90.h,
+            width: 80.w,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20.r)
+            ),
+            child: FittedBox(child: Image.asset(productData.img)),
           ),
           SizedBox(width: 10.w),
           Expanded(
@@ -50,14 +58,14 @@ class CommonProductCartTile extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            name,
+                            productData.name,
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(
                                 fontSize: 16.sp, fontWeight: FontWeight.w600),
                           ),
-                          SizedBox(height: 5.h),
+                          SizedBox(height: 3.h),
                           Text(
-                          "$kg kg",
+                          productData.kg,
                             style: TextStyle(
                                 fontSize: 11.sp, fontWeight: FontWeight.w500),
                           ),
@@ -66,9 +74,8 @@ class CommonProductCartTile extends StatelessWidget {
                     ),
                     IconButton(
                         onPressed: () {
-                          // wishListWatch.removeProduct(product);
                           showModalBottomSheet(context: context, builder: (context) {
-                            return const MyCartBottomSheet();
+                            return  ProductCommonBottomSheet(index:index ,);
                           },);
                         },
                         icon: Image.asset(
@@ -85,7 +92,7 @@ class CommonProductCartTile extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          price,
+                          productData.price.toString(),
                           style: TextStyle(
                               fontSize: 13.sp, fontWeight: FontWeight.w700),
                         ),
@@ -103,7 +110,7 @@ class CommonProductCartTile extends StatelessWidget {
                             children: [
                               IconButton(
                                   onPressed: removeQuantity, icon: const Icon(Icons.remove,size: 18,)),
-                              Text(quantity,style: TextStyles.w500.copyWith(fontSize: 14.sp,color: Colors.black),),
+                              Text(productData.quantity.toString(),style: TextStyles.w500.copyWith(fontSize: 14.sp,color: Colors.black),),
                               IconButton(onPressed: addQuantity, icon: const Icon(Icons.add,size: 18,))
                             ],
                           ),

@@ -82,14 +82,12 @@ class ProductDetailSlider extends ConsumerWidget {
                 onPressed: () {
                 },
                 style: ButtonStyle(
-                    padding: MaterialStateProperty.resolveWith(
-                            (states) => EdgeInsets.all(20.r)),
                     backgroundColor: MaterialStateProperty.resolveWith(
-                            (states) => Colors.grey.shade200)),
-                icon:Image.asset(AppAssets.shareIcon,scale: 20,)
+                            (states) => Colors.white)),
+                icon:Image.asset(AppAssets.shareIcon,scale: 22,)
             )
           ],
-        )
+        ).paddingHorizontal(10.w)
       ],
     );
   }

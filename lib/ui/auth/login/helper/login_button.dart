@@ -28,7 +28,7 @@ class LogInButton extends ConsumerWidget {
             Text("${appStringWatch.doNotHaveAccountKey}? ",style: TextStyles.w400.copyWith(fontSize: 14.sp,color: AppColors.subTextGreyColor),),
             TextButton(onPressed: (){
               context.pushNamed(AppRoute.register);
-            }, child: Text(appStringWatch.signUpKey,style: TextStyles.w400.copyWith(fontSize: 14.sp,color: AppColors.primary),))
+            }, child: Text(appStringWatch.signInKey,style: TextStyles.w400.copyWith(fontSize: 14.sp,color: AppColors.primary),))
           ],
         )
       ],

@@ -21,7 +21,9 @@ class ProductDetailController extends ChangeNotifier{
     notifyListeners();
   }
   removeQuantity(){
-    quantity--;
+    if(0 < quantity){
+      quantity--;
+    }
     notifyListeners();
   }
 

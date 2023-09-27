@@ -18,7 +18,7 @@ class ProductDetailView extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Arabic Ginger",style: TextStyles.w600.copyWith(fontSize: 25.sp,color: AppColors.black),),
+              Text("Arabic Ginger",style: TextStyles.w600.copyWith(fontSize: 22.sp,color: AppColors.black),),
               IconButton(onPressed: (){}, icon: Image.asset(AppAssets.heartActiveIcon,scale: 22,))
             ],
           ),
@@ -28,7 +28,7 @@ class ProductDetailView extends StatelessWidget {
              Container(
                alignment: Alignment.center,
                decoration: BoxDecoration(
-                 color: Colors.grey.shade300,
+                 color: Colors.grey.shade200,
                  borderRadius: BorderRadius.circular(10.r)
                ),
                child: Text("236 sold",style: TextStyles.w600.copyWith(fontSize: 13.sp,color: AppColors.black),).paddingSymmetric(horizontal: 6.w,vertical: 4.h),
@@ -41,16 +41,15 @@ class ProductDetailView extends StatelessWidget {
           SizedBox(height: 10.h,),
           Row(
             children: [
-              Text("₹110.00",style: TextStyles.w600.copyWith(fontSize: 25.sp,color: AppColors.black),),
+              Text("₹110.00",style: TextStyles.w600.copyWith(fontSize: 22.sp,color: AppColors.black),),
               SizedBox(width:5.w),
-              Text("200.00",style: TextStyles.w600.copyWith(fontSize: 22.sp,color: AppColors.textGreyColor,decoration: TextDecoration.lineThrough),),
+              Text("200.00",style: TextStyles.w600.copyWith(fontSize: 20.sp,color: AppColors.textGreyColor,decoration: TextDecoration.lineThrough),),
             ],
           ),
-          SizedBox(height: 10.h,),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Description",style: TextStyles.w600.copyWith(fontSize: 16.sp,color: AppColors.black),),
+              Text("Description",style: TextStyles.w600.copyWith(fontSize: 14.sp,color: AppColors.black),).paddingVertical(10.h),
               SizedBox(height: 5.h,),
               Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",style: TextStyles.w400.copyWith(fontSize: 14.sp,color: AppColors.textGreyColor)),
             ],

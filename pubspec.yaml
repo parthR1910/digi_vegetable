@@ -47,6 +47,7 @@ dependencies:
   page_transition:
   pinput:
   syncfusion_flutter_sliders: ^23.1.36
+  flutter_rating_bar:
 
 dev_dependencies:
   flutter_test:

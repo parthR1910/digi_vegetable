@@ -12,7 +12,7 @@ class MostPopular extends StatelessWidget {
       child: Scaffold(
         body: Column(
           children: [
-            const CommonAppbar(title: "Most Popular",),
+            const CommonAppbar(title: "Most Popular",color: Colors.white,),
             SizedBox(height: 10.h,),
             const MostPopularHeader(),
             SizedBox(height: 10.h,),

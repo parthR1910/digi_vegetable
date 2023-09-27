@@ -1,15 +1,19 @@
+import 'package:digi_vegetable/frame_work/controller/my_cart_controller/my_cart_controller.dart';
 import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
 import 'package:digi_vegetable/ui/utils/theme/app_colors.dart';
 
-import '../../utils/common_widget/common_button.dart';
-import '../../utils/theme/text_styles.dart';
-import '../../utils/theme/theme.dart';
+import '../../../theme/text_styles.dart';
+import '../../../theme/theme.dart';
+import '../../common_button.dart';
 
-class MyCartBottomSheet extends StatelessWidget {
-  const MyCartBottomSheet({super.key});
+
+class ProductCommonBottomSheet extends ConsumerWidget {
+  final int index;
+  const ProductCommonBottomSheet( {required this.index,super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context,WidgetRef ref) {
+    final myCartWatch = ref.watch(myCartController);
     return BottomSheet(
       backgroundColor: Colors.white,
       enableDrag: false,
@@ -39,6 +43,8 @@ class MyCartBottomSheet extends StatelessWidget {
                 }, btnText: "Cancel",border: Border.all(color: AppColors.primary,width: 1.5),backgroundColor: AppColors.white,txtColor: AppColors.primary,)),
                 SizedBox(width: 4.w,),
                 Expanded(child: CommonButton(onTap: (){
+                      myCartWatch.deleteItem(index);
+                      context.pop();
                 }, btnText: "Remove")),
               ],
             )

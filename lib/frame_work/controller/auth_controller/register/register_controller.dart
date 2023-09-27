@@ -64,4 +64,12 @@ class RegisterController extends ChangeNotifier{
     }
     notifyListeners();
   }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+  }
 }

@@ -1,5 +1,5 @@
+import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
 import 'package:digi_vegetable/ui/utils/extension/widget_extension.dart';
-
 import '../../../frame_work/controller/product_detail_controller/product_detail_controller.dart';
 import '../../utils/theme/app_colors.dart';
 import '../../utils/theme/text_styles.dart';
@@ -19,7 +19,7 @@ class ProductDetailForm extends ConsumerWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("KG",style: TextStyles.w600.copyWith(fontSize: 16.sp,color: AppColors.black),),
+              Text("KG",style: TextStyles.w600.copyWith(fontSize: 14.sp,color: AppColors.black),).paddingVertical(5.h),
               SizedBox(
                 height: 60.h,
                 width: 160,
@@ -62,27 +62,53 @@ class ProductDetailForm extends ConsumerWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Quantity",style: TextStyles.w600.copyWith(fontSize: 16.sp,color: AppColors.black),),
+              Text("Quantity",style: TextStyles.w600.copyWith(fontSize: 14.sp,color: AppColors.black),).paddingVertical(5.h),
               Container(
-                width: 160.w,
+                height: 43.h,
+                width: context.screenWidth,
+                clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.r),
-                    border: Border.all(color: Colors.grey.shade400,width: 1.5.w)
-                ),
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(8.r),
+                    border:
+                    Border.all(color: Colors.grey.shade500, width: 1.5.w)),
                 child: FittedBox(
+                  fit: BoxFit.cover,
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      TextButton(onPressed: (){
-                        productDetailWatch.removeQuantity();
-                      }, child: Text("-",style: TextStyles.w500.copyWith(fontSize: 25.sp,color: Colors.black),)),
-                      Text("${productDetailWatch.quantity}",style: TextStyles.w500.copyWith(fontSize: 20.sp,color: Colors.black),),
-                      TextButton(onPressed: (){
-                        productDetailWatch.addQuantity();
-                      }, child: Text("+",style: TextStyles.w500.copyWith(fontSize: 25.sp,color: Colors.black),))
+                      IconButton(
+                          style: IconButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.r))),
+                          onPressed: () {
+                              productDetailWatch.removeQuantity();
+                          },
+                          icon: Text(
+                            "-",
+                            style: TextStyles.w300.copyWith(fontSize: 16.sp,color: AppColors.black)
+                          )),
+                      SizedBox(width: 10.w),
+                      Text(
+                        "${productDetailWatch.quantity}",
+                        style: TextStyles.w400.copyWith(fontSize: 12.sp,color: AppColors.black)
+                      ),
+                      SizedBox(width: 10.w),
+                      IconButton(
+                          style: IconButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10.r))),
+                          onPressed: () {
+                          productDetailWatch.addQuantity();
+                          },
+                          icon: Text(
+                            "+",
+                            style: TextStyles.w300.copyWith(fontSize: 16.sp,color: AppColors.black)
+                          )),
                     ],
                   ),
-                ).paddingOnly(top: 3.h,bottom: 3.h,left: 8.w,right: 8.w),
-              ),
+                ),
+              )
             ],
           ),
         )

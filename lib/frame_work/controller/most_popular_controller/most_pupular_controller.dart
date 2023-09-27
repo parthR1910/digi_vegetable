@@ -2,6 +2,7 @@ import 'package:digi_vegetable/frame_work/controller/wishlist_controller/wishlis
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
 import '../../../ui/utils/theme/app_assets.dart';
+import '../../repository/model/product_data.dart';
 
 final mostPopularFilterController = ChangeNotifierProvider((ref) => MostPopularFilterController(ref));
 
@@ -18,12 +19,12 @@ class MostPopularFilterController extends ChangeNotifier{
   }
 
   List<ProductData> products=[
-    ProductData(img: AppAssets.fruitsIcon, name: "Apple", price: 180, discount: 10, isLiked: false, items: "0kg",),
-    ProductData(img: AppAssets.rootsIcon, name: "Beat Root", price: 20, discount: 20, isLiked: false, items: "0kg",),
-    ProductData(img: AppAssets.bulbsImg, name: "Onion", price: 100, discount: 30, isLiked: false, items: "0kg",),
-    ProductData(img: AppAssets.fruitsIcon, name: "Apple", price: 180, discount: 10, isLiked: false, items: "0kg",),
-    ProductData(img: AppAssets.rootsIcon, name: "Beat Root", price: 20, discount: 20, isLiked: false, items: "0kg",),
-    ProductData(img: AppAssets.bulbsImg, name: "Onion", price: 100, discount: 30, isLiked: false, items: "0kg",),
+    ProductData(img: AppAssets.fruitsIcon, name: "Apple", price: 180, discount: 10, isLiked: false, kg: "0kg",),
+    ProductData(img: AppAssets.rootsIcon, name: "Beat Root", price: 20, discount: 20, isLiked: false, kg: "0kg",),
+    ProductData(img: AppAssets.bulbsImg, name: "Onion", price: 100, discount: 30, isLiked: false, kg: "0kg",),
+    ProductData(img: AppAssets.fruitsIcon, name: "Apple", price: 180, discount: 10, isLiked: false, kg: "0kg",),
+    ProductData(img: AppAssets.rootsIcon, name: "Beat Root", price: 20, discount: 20, isLiked: false, kg: "0kg",),
+    ProductData(img: AppAssets.bulbsImg, name: "Onion", price: 100, discount: 30, isLiked: false, kg: "0kg",),
   ];
 
   updateLike(int index){
@@ -38,7 +39,7 @@ class MostPopularFilterController extends ChangeNotifier{
 
   getItemOfData(int index,String itemData){
     if(itemData.isNotEmpty){
-      products[index].items = itemData;
+      products[index].kg = itemData;
     }
     notifyListeners();
   }
@@ -50,12 +51,3 @@ class MostPopularFilterController extends ChangeNotifier{
   }
 }
 
-class ProductData{
-  final String img;
-  bool isLiked;
-  int discount;
-  final String name;
-  int price;
-  String items;
-  ProductData({required this.img,required this.name,required this.isLiked,required this.price,required this.discount,required this.items});
-}

@@ -52,6 +52,7 @@ class LoginForm extends StatelessWidget {
                    Text(appStringWatch.rememberMeKey,style: TextStyles.w500.copyWith(fontSize: 12.sp,color: AppColors.hintTextColor),)
                  ],
                ),
+               const Expanded(child: SizedBox()),
                TextButton(onPressed: (){
                  context.pushNamed(AppRoute.forgetPassword);
                }, child:  Text("${appStringWatch.forgetPassKey}?",style:TextStyles.w500.copyWith(fontSize: 12.sp,color: AppColors.primary,))

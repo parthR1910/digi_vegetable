@@ -2,6 +2,7 @@ import 'package:digi_vegetable/frame_work/controller/home_controller/new_arrival
 import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
 import 'package:digi_vegetable/ui/utils/common_widget/common_product_card.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
+import 'package:digi_vegetable/ui/app_routes/app_routes.dart';
 
 class NewArrivalProductCard extends StatelessWidget {
   const NewArrivalProductCard({super.key});
@@ -19,6 +20,9 @@ class NewArrivalProductCard extends StatelessWidget {
               children: List.generate(newArrivalWatch.products.length, (index) {
                 final product = newArrivalWatch.products[index];
                 return CommonProductCard(productData: product,
+                  onTap: (){
+                    context.pushNamed(AppRoute.productDetail);
+                  },
                   onSelected: (val) {
                     switch (val) {
                       case "500g":

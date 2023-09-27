@@ -1,5 +1,8 @@
-import '../../utils/common_widget/common_button.dart';
-import '../../utils/theme/theme.dart';
+import 'package:digi_vegetable/ui/app_routes/app_routes.dart';
+import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
+
+import '../../../utils/common_widget/common_button.dart';
+import '../../../utils/theme/theme.dart';
 
 class PaymentMethodBottomBar extends StatelessWidget {
   const PaymentMethodBottomBar({super.key});
@@ -13,7 +16,9 @@ class PaymentMethodBottomBar extends StatelessWidget {
         decoration: BoxDecoration(
             border: Border.all(color: Colors.grey.shade400,width: 1.5.w),
             borderRadius: BorderRadius.vertical(top: Radius.circular(30.r))),
-        child: CommonButton(onTap: (){},btnText: "Apply",height: 50,)
+        child: CommonButton(onTap: (){
+          context.pushNamed(AppRoute.payment);
+        },btnText: "Apply",height: 50,)
     );
   }
 }

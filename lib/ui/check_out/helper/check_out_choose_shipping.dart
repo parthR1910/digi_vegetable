@@ -15,11 +15,13 @@ class CheckOutChooseShipping extends StatelessWidget {
         Text("Choose Shipping",style: TextStyles.w600.copyWith(fontSize: 16.sp,color: AppColors.black),),
         SizedBox(height: 8.h,),
         ListTile(
-          onTap: (){},
+          onTap: (){
+
+          },
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.r),side: BorderSide(color: Colors.grey.shade400,width: 1.2.w)),
           leading: Image.asset(AppAssets.shippingCargoIcon,scale: 22,color: Colors.black,),
           trailing: const Icon(Icons.navigate_next_sharp,color: Colors.black,),
-          title: Text("Choose Shipping Type",style: TextStyles.w600.copyWith(fontSize: 18.sp,color: AppColors.black),),
+          title: Text("Choose Shipping Type",style: TextStyles.w600.copyWith(fontSize: 16.sp,color: AppColors.black),),
         )
       ],
     );

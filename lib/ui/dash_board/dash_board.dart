@@ -10,10 +10,7 @@ class DashBoard extends ConsumerWidget {
     final dashBoardWatch = ref.watch(dashBoardController);
     return  Scaffold(
       // key: dasBoardWatch.key,
-      body: IndexedStack(
-        index: dashBoardWatch.selectedIndex,
-        children: dashBoardWatch.pages,
-      ),
+      body: dashBoardWatch.pages[dashBoardWatch.selectedIndex],
       bottomNavigationBar: const DashBoardBottomNavBar(),
     );
   }

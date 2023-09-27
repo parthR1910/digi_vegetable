@@ -20,10 +20,13 @@ import 'package:digi_vegetable/ui/product_filter/helper/category_filter/category
 import 'package:digi_vegetable/ui/reviews/reviews.dart';
 import 'package:digi_vegetable/ui/search/search.dart';
 import 'package:digi_vegetable/ui/shipping_address/shipping_address.dart';
+import 'package:digi_vegetable/ui/track_order/track_order.dart';
+import 'package:digi_vegetable/ui/view_order/view_order.dart';
 import 'package:digi_vegetable/ui/wish_list/wish_list.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import '../on_boarding/on_boarding.dart';
+import '../payment_method/payment.dart';
 import '../splash/splash.dart';
 
 class RoutesManager {
@@ -90,6 +93,13 @@ class RoutesManager {
         return PageTransition(child: const ShippingAddress(), type: PageTransitionType.fade,duration: const Duration(milliseconds: 300));
       case AppRoute.paymentMethod:
         return PageTransition(child: const PaymentMethod(), type: PageTransitionType.fade,duration: const Duration(milliseconds: 300));
+      case AppRoute.payment:
+        return PageTransition(child: const Payment(), type: PageTransitionType.fade,duration: const Duration(milliseconds: 300));
+      case AppRoute.viewOrder:
+        return PageTransition(child: const ViewOrder(), type: PageTransitionType.fade,duration: const Duration(milliseconds: 300));
+      case AppRoute.trackOrder:
+        return PageTransition(child: const TrackOrder(), type: PageTransitionType.fade,duration: const Duration(milliseconds: 300));
+
 
       default:
         return MaterialPageRoute(

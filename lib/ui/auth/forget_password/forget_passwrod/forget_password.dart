@@ -33,7 +33,7 @@ class ForgetPassword extends ConsumerWidget {
                 SizedBox(
                   height: 345.h,
                   width: context.screenHeight,
-                  child: Image.asset(AppAssets.forgetPassImage,fit: BoxFit.cover,),
+                  child: Image.asset(AppAssets.forgetPassImage,fit: BoxFit.fill,),
                 ),
                 const ForgetPassForm()
               ],

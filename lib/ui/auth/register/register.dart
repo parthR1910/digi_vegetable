@@ -26,27 +26,32 @@ class Register extends ConsumerWidget {
     final  appStringWatch = ref.watch(appStringController);
     return Column(
       children: [
-        Expanded(flex: 4,
-          //     child: Container(
-          //   color: Colors.black,
-          // ),
-          child: SizedBox(
-              width: double.infinity,
-              child: Image.asset(AppAssets.registerImage,fit: BoxFit.cover,)),
-        ),
+        // Expanded(flex: 4,
+        //   //     child: Container(
+        //   //   color: Colors.black,
+        //   // ),
+        //   child: ,
+        // ),
         Expanded(
-            flex: 7,
             child: SingleChildScrollView(
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(appStringWatch.letGetStartedKey,style: TextStyles.w600.copyWith(fontSize: 22.sp,color: AppColors.black),),
-                  Text(appStringWatch.signUpSubtitleKey,style: TextStyles.w600.copyWith(fontSize: 14.sp,color: AppColors.textGreyColor),),
-                  SizedBox(height: 40.h,),
-                  const RegisterForm(),
+                  SizedBox(
+                      height: 300,
+                      width: double.infinity,
+                      child: Image.asset(AppAssets.registerImage,fit: BoxFit.cover,)),
+                 Column(
+                   crossAxisAlignment: CrossAxisAlignment.start,
+                   children: [
+                     Text(appStringWatch.letGetStartedKey,style: TextStyles.w600.copyWith(fontSize: 22.sp,color: AppColors.black),),
+                     Text(appStringWatch.signUpSubtitleKey,style: TextStyles.w600.copyWith(fontSize: 14.sp,color: AppColors.textGreyColor),),
+                     SizedBox(height: 40.h,),
+                     const RegisterForm(),
+                   ],
+                 ).paddingSymmetric(horizontal: 16.w,vertical:10.h )
                 ],
               ),
-            ).paddingSymmetric(horizontal: 16.w,vertical:10.h )
+            )
         )
       ],
     );

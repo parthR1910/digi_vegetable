@@ -1,4 +1,5 @@
 import 'package:digi_vegetable/frame_work/controller/most_popular_controller/most_pupular_controller.dart';
+import 'package:digi_vegetable/ui/app_routes/app_routes.dart';
 import 'package:digi_vegetable/ui/utils/common_widget/common_product_card.dart';
 import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
@@ -20,6 +21,9 @@ class HomeMostPopularProductCard extends StatelessWidget {
                     (index) {
                   final product = mostPopularProductWatch.products[index];
                   return CommonProductCard(
+                    onTap: (){
+                      context.pushNamed(AppRoute.productDetail);
+                    },
                     productData: product,
                     onSelected: (val) {
                       switch (val) {

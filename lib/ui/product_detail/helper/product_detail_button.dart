@@ -11,10 +11,10 @@ class ProductDetailButton extends StatelessWidget {
       padding:  EdgeInsets.only(bottom: 8.h,left: 8.w,right: 8.w),
       child: Row(
         children: [
-          Expanded(child: CommonButton(onTap: (){}, btnText: "Buy Now",border: Border.all(color: AppColors.primary,width: 1.5),backgroundColor: AppColors.white,txtColor: AppColors.primary,)),
+          Expanded(child: CommonButton(fontSize: 16.sp,onTap: (){}, btnText: "Buy Now",border: Border.all(color: AppColors.primary,width: 1.5),backgroundColor: AppColors.white,txtColor: AppColors.primary,)),
           SizedBox(width: 4.w,),
           Expanded(child: CommonButton(onTap: (){
-          }, btnText: "Add to Cart")),
+          }, btnText: "Add to Cart",fontSize: 16.sp,)),
         ],
       ),
     );

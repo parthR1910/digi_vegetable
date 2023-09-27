@@ -5,19 +5,19 @@ final paymentMethodController = ChangeNotifierProvider((ref) => PaymentMethodCon
 
 class PaymentMethodController extends ChangeNotifier{
 
-  Map<String, dynamic>? selectedAddress;
-  List<Map<String, dynamic>> dummyAddresses = [];
+  Map<String, dynamic>? selectedPayMethod;
+  List<Map<String, dynamic>> paymentMethodList = [];
 
   init() {
-    dummyAddresses = [
+    paymentMethodList = [
       {'title': 'Online Payment', 'img':AppAssets.cashOnDeliveryIcon},
       {'title': 'Cash on Delivery','img':AppAssets.moneyTransferIcon},
     ];
-    selectedAddress = dummyAddresses[0];
+    selectedPayMethod = paymentMethodList[0];
   }
 
-  updateSelectAddress(var address) {
-    selectedAddress = address;
+  updateSelectedPayMethod(var address) {
+    selectedPayMethod = address;
     notifyListeners();
   }
 }

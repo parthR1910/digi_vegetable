@@ -1,4 +1,3 @@
-import 'dart:js_interop';
 
 import 'package:digi_vegetable/frame_work/controller/shipping_address_controller/shipping_address_controller.dart';
 import 'package:digi_vegetable/ui/utils/common_widget/common_button.dart';

@@ -19,7 +19,7 @@ class CheckOut extends StatelessWidget {
         bottomNavigationBar: const CheckOutBottomBar(),
         body: Column(
           children: [
-            const CommonAppbar(title: "Check Out",),
+            const CommonAppbar(title: "Check Out",color: Colors.white,).paddingHorizontal(16.w),
               Expanded(child:
               SingleChildScrollView(
                 child: Column(

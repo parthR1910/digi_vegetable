@@ -23,6 +23,8 @@ class CommonTextFormField extends StatelessWidget {
   final GestureTapCallback? onTap;
   final Function(String)? onChanged;
   final int? maxLength;
+  final InputBorder? customBorder;
+  final EdgeInsetsGeometry? contentPadding;
 
   const CommonTextFormField(
       {super.key,
@@ -38,7 +40,7 @@ class CommonTextFormField extends StatelessWidget {
       this.keyboardType,
       this.suffixStyle,
       this.validator,
-      this.onTap, this.prefixIcon, this.onChanged, this.maxLength, this.fillColor});
+      this.onTap, this.prefixIcon, this.onChanged, this.maxLength, this.fillColor, this.customBorder, this.contentPadding});
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +59,7 @@ class CommonTextFormField extends StatelessWidget {
       obscureText: obscureText!,
       style: TextStyles.w500.copyWith(color: AppColors.black, fontSize: 16.sp),
       decoration: InputDecoration(
-
+        contentPadding: contentPadding,
         counterText: "",
         filled: true,
         hintText: hintText,
@@ -72,22 +74,25 @@ class CommonTextFormField extends StatelessWidget {
             TextStyles.w500.copyWith(fontSize: 16.sp, color: AppColors.primary),
         prefixIcon: prefixIcon,
         fillColor:fillColor?? AppColors.textFieldBackgroundColor,
-        // contentPadding: EdgeInsets.only(left: 16.w, top: 16.h, bottom: 15.h),
-        enabledBorder: OutlineInputBorder(
+        border: customBorder ?? OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
             borderSide: const BorderSide(
                 color: AppColors.textFieldBorderColor, width: 1.0)),
-        disabledBorder: OutlineInputBorder(
+        enabledBorder:customBorder ?? OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
             borderSide: const BorderSide(
                 color: AppColors.textFieldBorderColor, width: 1.0)),
-        errorBorder: OutlineInputBorder(
+        disabledBorder:customBorder ?? OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: const BorderSide(
+                color: AppColors.textFieldBorderColor, width: 1.0)),
+        errorBorder:customBorder ?? OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
             borderSide: const BorderSide(color: AppColors.red, width: 1.0)),
-        focusedErrorBorder: OutlineInputBorder(
+        focusedErrorBorder:customBorder ?? OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
             borderSide: const BorderSide(color: AppColors.red, width: 1.0)),
-        focusedBorder: OutlineInputBorder(
+        focusedBorder:customBorder ?? OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
             borderSide: const BorderSide(
                 color: AppColors.textFieldBorderColor, width: 1.0)),

@@ -50,6 +50,54 @@ class OTPForm extends StatelessWidget {
             alignment: Alignment.center,
             child: SizedBox(
               child: Pinput(
+                submittedPinTheme: PinTheme(
+                    width: 80.w,
+                    height: 60.h,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12.r),
+                        color: Colors.grey.shade200
+                    )
+                ),
+                errorPinTheme: PinTheme(
+                    width: 80.w,
+                    height: 60.h,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12.r),
+                        color: Colors.grey.shade200
+                    )
+                ),
+                followingPinTheme: PinTheme(
+                    width: 80.w,
+                    height: 60.h,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12.r),
+                        color: Colors.grey.shade200
+                    )
+                ),
+                disabledPinTheme: PinTheme(
+                    width: 80.w,
+                    height: 60.h,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12.r),
+                        color: Colors.grey.shade200
+                    )
+                ),
+                defaultPinTheme: PinTheme(
+                    width: 80.w,
+                    height: 60.h,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12.r),
+                        color: Colors.grey.shade200
+                    )
+                ),
+                focusedPinTheme:  PinTheme(
+                    width: 80.w,
+                    height: 60.h,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12.r),
+                        color: Colors.grey.shade200
+                    )
+                ),
                 keyboardType: TextInputType.number,
                 length: 4,
                 onChanged:  forgetPassWatch.get,

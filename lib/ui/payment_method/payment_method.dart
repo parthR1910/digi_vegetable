@@ -1,6 +1,7 @@
-import 'package:digi_vegetable/ui/payment_method/helper/payment_method_bottom_bar.dart';
-import 'package:digi_vegetable/ui/payment_method/helper/payment_method_list.dart';
+import 'package:digi_vegetable/ui/payment_method/helper/payment_method/payment_method_bottom_bar.dart';
+import 'package:digi_vegetable/ui/payment_method/helper/payment_method/payment_method_list.dart';
 import 'package:digi_vegetable/ui/utils/common_widget/common_appbar.dart';
+import 'package:digi_vegetable/ui/utils/extension/widget_extension.dart';
 
 import '../utils/theme/theme.dart';
 
@@ -9,19 +10,19 @@ class PaymentMethod extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      bottomNavigationBar: PaymentMethodBottomBar(),
+    return Scaffold(
+      bottomNavigationBar: const PaymentMethodBottomBar().paddingHorizontal(16.w),
       body: SafeArea(
         child: Column(
           children: [
-            CommonAppbar(title: "Payment Method",),
+            const CommonAppbar(title: "Payment Method",),
             Expanded(
               child: SingleChildScrollView(
-                child: Column(
+                child: const Column(
                   children: [
-                  PaymentMethodList()
+                 PaymentMethodList()
                   ],
-                ),
+                ).paddingHorizontal(16.w),
               ),
             )
           ],

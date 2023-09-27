@@ -1,4 +1,3 @@
-import '../../theme/app_assets.dart';
 import '../../theme/app_colors.dart';
 import '../../theme/text_styles.dart';
 import '../../theme/theme.dart';
@@ -9,7 +8,8 @@ class CommonAppTile extends StatelessWidget {
   final String? subtitle;
   final Widget? trailing;
   final void Function()? onTap;
-  const CommonAppTile({super.key, required this.leadingImg, required this.title, this.subtitle, this.trailing, this.onTap});
+  final Color? backgroundColor;
+  const CommonAppTile({super.key, required this.leadingImg, required this.title, this.subtitle, this.trailing, this.onTap, this.backgroundColor});
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +18,11 @@ class CommonAppTile extends StatelessWidget {
       contentPadding: EdgeInsets.symmetric(horizontal: 14.w,vertical: 10.h),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.r,),side: BorderSide(color: Colors.grey.shade400,width: 1.2)),
       leading: CircleAvatar(
-        backgroundColor: Colors.grey.shade300,
+        backgroundColor: backgroundColor ??Colors.grey.shade300,
         radius: 25,
         child:CircleAvatar(
           radius: 18,
-          backgroundColor: AppColors.primary,
+          backgroundColor: backgroundColor ?? AppColors.primary,
           child:Image.asset(leadingImg,scale: 20,),
         ),
       ),

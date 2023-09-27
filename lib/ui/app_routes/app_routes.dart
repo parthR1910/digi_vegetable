@@ -24,5 +24,8 @@ class AppRoute{
   static const String checkOut = "checkOut";
   static const String shippingAddress = "shippingAddress";
   static const String paymentMethod = "paymentMethod";
+  static const String payment = "payment";
+  static const String viewOrder = "viewOrder";
+  static const String trackOrder = "trackOrder";
 
 }

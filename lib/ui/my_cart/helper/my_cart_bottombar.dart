@@ -1,5 +1,7 @@
+import 'package:digi_vegetable/ui/utils/extension/context_extension.dart';
 import 'package:digi_vegetable/ui/utils/extension/widget_extension.dart';
 
+import '../../app_routes/app_routes.dart';
 import '../../utils/common_widget/common_button.dart';
 import '../../utils/theme/theme.dart';
 
@@ -34,7 +36,9 @@ class MyCartBottomBar extends StatelessWidget {
             ],
           ).marginSymmetric(horizontal: 20.w, vertical: 15.h),
           CommonButton(
-            onTap: () {},
+            onTap: () {
+              context.pushNamed(AppRoute.checkOut);
+            },
             btnText: 'Checkout',
             fontSize: 15.sp,
             height: 55.h,

@@ -3,6 +3,7 @@ import 'package:digi_vegetable/ui/home/home.dart';
 import 'package:digi_vegetable/ui/utils/theme/theme.dart';
 
 import '../../my_cart/my_cart.dart';
+import '../../my_order/my_order.dart';
 
 final dashBoardController = ChangeNotifierProvider((ref) => DashBoardController(ref));
 
@@ -16,7 +17,7 @@ class DashBoardController extends ChangeNotifier{
     const Home(),
     const Category(),
     const MyCart(),
-    Container(),
+    const MyOrders(),
     Container(),
   ];
 
