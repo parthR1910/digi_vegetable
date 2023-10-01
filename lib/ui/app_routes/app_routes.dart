@@ -1,5 +1,4 @@
-
-class AppRoute{
+class AppRoute {
   static const String splash = "/";
   static const String onBoarding = "onBoarding";
   static const String authIntro = "authIntro";
@@ -28,4 +27,12 @@ class AppRoute{
   static const String viewOrder = "viewOrder";
   static const String trackOrder = "trackOrder";
 
+  ///profile routes
+
+  static const String editProfile = "editProfile";
+  static const String address = "address";
+  static const String profileNotification = "profileNotification";
+  static const String privacyPolicy = "privacyPolicy";
+  static const String helpCenter = "helpCenter";
+  static const String myOrders = "myOrders";
 }

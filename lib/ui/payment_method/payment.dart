@@ -10,18 +10,18 @@ class Payment extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      bottomNavigationBar: const PaymentBottomBar().paddingHorizontal(16.w),
-      body: const SafeArea(
+    return Scaffold(
+      bottomNavigationBar: const PaymentBottomBar(),
+      body: SafeArea(
         child: Column(
           children: [
-            CommonAppbar(title: "Payment Method",),
-            Expanded(
+            const CommonAppbar(
+              title: "Payment Method",
+            ).paddingHorizontal(16.w),
+            const Expanded(
               child: SingleChildScrollView(
                 child: Column(
-                  children: [
-                    PaymentList()
-                  ],
+                  children: [PaymentList()],
                 ),
               ),
             )

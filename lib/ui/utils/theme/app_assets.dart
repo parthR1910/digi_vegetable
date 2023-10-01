@@ -1,5 +1,4 @@
 class AppAssets {
-
   AppAssets._();
   static const String slash = 'assets/images/1.png';
   static const String onBoardImg1 = 'assets/images/onBoardImg1.png';
@@ -11,12 +10,11 @@ class AppAssets {
   static const String registerOtpImage = 'assets/images/registerOtp.png';
   static const String forgetPassImage = 'assets/images/forgetPassImg.png';
   static const String otpImage = 'assets/images/otpImage.png';
-  static const String userImgPlaceholder = 'assets/images/userImgPlaceholder.png';
+  static const String userImgPlaceholder =
+      'assets/images/userImgPlaceholder.png';
   static const String setNewPassImg = 'assets/images/setNewPasswordImg.png';
   static const String rocketImg = 'assets/images/rocket.png';
   static const String emptyNoteImg = 'assets/images/emptyNoteImg.png';
-
-
 
   ///payment icon
 
@@ -25,9 +23,7 @@ class AppAssets {
   static const String payPalIcon = 'assets/images/PayPalLogo.png';
   static const String instamojoIcon = 'assets/images/instamojo.png';
 
-
   static const String successCartLogoIcon = 'assets/images/SuccessCartLogo.png';
-
 
   ///Icons of the app
   static const String emailIcon = 'assets/images/email_icon.png';
@@ -53,15 +49,17 @@ class AppAssets {
   static const String paperDownloadIcon = 'assets/images/PaperDownload.png';
   static const String paperIcon = 'assets/images/paperIcon.jpg';
   static const String shippingBoxIcon = 'assets/images/shippingBox.png';
-
-
+  static const String editProfileIcon = 'assets/images/EditProfileIcon.png';
+  static const String lockIcon = 'assets/images/Lock.png';
+  static const String logoutIcon = 'assets/images/Logout.png';
+  static const String starUnselectedIcon = 'assets/images/starUnselected.png';
+  static const String infoSquareIcon = 'assets/images/InfoSquare.png';
 
   ///--------------------- slider images ---------------------------///
 
   static const String sliderImg1 = 'assets/images/sliderImmg1.png';
 
   ///---------------------------------------------------------------///
-
 
   static const String fruitsIcon = 'assets/images/Fruits.png';
   static const String rootsIcon = 'assets/images/Roots.png';
@@ -75,15 +73,13 @@ class AppAssets {
   static const String ginGerImg = 'assets/images/gingerImg.png';
   static const String orangeImg = 'assets/images/orangeImg.png';
 
-
-
-
   ///-------------------- Navigation Bar Icon ----------------------------///
   static const String homeIcon = 'assets/images/HomeUnselected.png';
   static const String homeActiveIcon = 'assets/images/HomeActiveIcon.png';
 
   static const String categoryIcon = 'assets/images/Category.png';
-  static const String categoryActiveIcon = 'assets/images/CategoryActiveIcon.png';
+  static const String categoryActiveIcon =
+      'assets/images/CategoryActiveIcon.png';
 
   static const String basketIcon = 'assets/images/basket.png';
   static const String basketActiveIcon = 'assets/images/BasketActive.png';
@@ -93,11 +89,10 @@ class AppAssets {
 
   static const String personIcon = 'assets/images/Profile.png';
   static const String personActiveIcon = 'assets/images/ProfileActive.png';
-  ///--------------------------------------------------------///
 
+  ///--------------------------------------------------------///
 
   /// Offer Banners ////
   static const String offerBanner1 = 'assets/images/offerBanner1.png';
   static const String offerBanner2 = 'assets/images/offerBanner2.png';
 }
-

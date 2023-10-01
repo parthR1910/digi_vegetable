@@ -13,13 +13,22 @@ class MyOrderProductTile extends StatelessWidget {
   final bool btnShow;
   final Function() onBtnTap;
 
-  const MyOrderProductTile({super.key, required this.img, required this.name, required this.kg, required this.status, required this.price, required this.btnTxt, required this.onBtnTap,this.btnShow =false});
+  const MyOrderProductTile(
+      {super.key,
+      required this.img,
+      required this.name,
+      required this.kg,
+      required this.status,
+      required this.price,
+      required this.btnTxt,
+      required this.onBtnTap,
+      this.btnShow = false});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 10.h),
-      padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
+      padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 10.w),
       decoration: BoxDecoration(
           // color: Colors.white,
           borderRadius: BorderRadius.circular(15.r),
@@ -30,12 +39,14 @@ class MyOrderProductTile extends StatelessWidget {
         children: [
           Container(
             clipBehavior: Clip.hardEdge,
-            height: 80.h,
-            width: 80.w,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20.r)
+            height: 100.h,
+            width: 90.w,
+            decoration:
+                BoxDecoration(borderRadius: BorderRadius.circular(20.r)),
+            child: Image.asset(
+              img,
+              fit: BoxFit.fitWidth,
             ),
-            child: FittedBox(child: Image.asset(img)),
           ),
           SizedBox(width: 10.w),
           Expanded(
@@ -62,15 +73,19 @@ class MyOrderProductTile extends StatelessWidget {
                           Text(
                             "$kg kg",
                             style: TextStyle(
-                                fontSize: 11.sp, fontWeight: FontWeight.w500),
+                                fontSize: 10.sp, fontWeight: FontWeight.w500),
                           ),
                           Container(
-                            padding: EdgeInsets.symmetric(horizontal: 8.w,vertical: 3.h),
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 8.w, vertical: 3.h),
                             decoration: BoxDecoration(
-                              color: Colors.grey.shade200,
-                              borderRadius: BorderRadius.circular(4.r)
+                                color: Colors.grey.shade200,
+                                borderRadius: BorderRadius.circular(4.r)),
+                            child: Text(
+                              status,
+                              style: TextStyles.w500.copyWith(
+                                  fontSize: 10.sp, color: Colors.black38),
                             ),
-                            child:  Text(status,style: TextStyles.w600.copyWith(fontSize: 12.sp,color: Colors.black38),),
                           )
                         ],
                       ),
@@ -90,20 +105,25 @@ class MyOrderProductTile extends StatelessWidget {
                         ),
                       ],
                     ),
-                    if(btnShow)
+                    if (btnShow)
                       GestureDetector(
-                      onTap: onBtnTap,
-                      child: Container(
-                        alignment: Alignment.center,
-                        padding: EdgeInsets.symmetric(horizontal: 12.w,vertical: 3.h),
-                        height: 25.h,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(4.r),
-                          color: AppColors.primary,
+                        onTap: onBtnTap,
+                        child: Container(
+                          alignment: Alignment.center,
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 12.w, vertical: 3.h),
+                          height: 25.h,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(4.r),
+                            color: AppColors.primary,
+                          ),
+                          child: Text(
+                            btnTxt,
+                            style: TextStyles.w600.copyWith(
+                                fontSize: 12.sp, color: AppColors.white),
+                          ),
                         ),
-                        child: Text(btnTxt,style: TextStyles.w600.copyWith(fontSize: 12.sp,color: AppColors.white),),
                       ),
-                    ),
                   ],
                 )
               ],

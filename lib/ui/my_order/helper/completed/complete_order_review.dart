@@ -8,7 +8,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import '../../../utils/theme/theme.dart';
 
 class CompleteOrderReview extends ConsumerWidget {
-  const CompleteOrderReview( {super.key});
+  const CompleteOrderReview({super.key});
   // final ProductData product;
 
   @override
@@ -39,21 +39,19 @@ class CompleteOrderReview extends ConsumerWidget {
                   'Leave a Review',
                   textAlign: TextAlign.center,
                   style:
-                  TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700),
+                      TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700),
                 ).marginOnly(bottom: 12.h),
                 Divider(
                   color: Colors.grey.shade200,
                 ).marginSymmetric(horizontal: 8.w),
-
-
                 MyOrderProductTile(
-                    img: AppAssets.ginGerImg, name:"Arabic Ginger", kg: 10.toString() , status: "completed", price: 568, btnTxt: "", onBtnTap: (){}),
-                // CompleteOrderCard(
-                //   product,
-                //   isFromReviewSheet: true,
-                // ).marginOnly(bottom: 15.h),
-
-
+                    img: AppAssets.ginGerImg,
+                    name: "Arabic Ginger",
+                    kg: 10.toString(),
+                    status: "completed",
+                    price: 568,
+                    btnTxt: "",
+                    onBtnTap: () {}),
                 Divider(
                   color: Colors.grey.shade200,
                 ).marginSymmetric(horizontal: 10.w),
@@ -61,13 +59,13 @@ class CompleteOrderReview extends ConsumerWidget {
                   'How is your Order?',
                   textAlign: TextAlign.center,
                   style:
-                  TextStyle(fontSize: 17.sp, fontWeight: FontWeight.w800),
+                      TextStyle(fontSize: 17.sp, fontWeight: FontWeight.w800),
                 ).marginOnly(bottom: 10.h),
                 Text(
                   'Please give your rating & also your review',
                   textAlign: TextAlign.center,
                   style:
-                  TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w500),
+                      TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w500),
                 ),
                 RatingBar.builder(
                   initialRating: 3,
@@ -81,17 +79,20 @@ class CompleteOrderReview extends ConsumerWidget {
                     color: context.colorScheme.primary,
                   ),
                   onRatingUpdate: (rating) {
-                    print(rating);
+                    // print(rating);
                   },
                 ).marginSymmetric(vertical: 5.h),
                 CommonTextFormField(
-                  suffixIcon: IconButton(onPressed: (){},icon: const Icon(Icons.image_outlined),color:const Color(0xFFffccac)),
-                  contentPadding: EdgeInsets.symmetric(horizontal: 16.w,vertical: 6.h),
+                  suffixIcon: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.image_outlined),
+                      color: const Color(0xFFffccac)),
+                  contentPadding:
+                      EdgeInsets.symmetric(horizontal: 16.w, vertical: 6.h),
                   hintText: "Review",
-                  customBorder:  OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8.r),
-                    borderSide: const BorderSide(color:  Color(0xFFffccac))
-                  ),
+                  customBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.r),
+                      borderSide: const BorderSide(color: Color(0xFFffccac))),
                 ).paddingVertical(16.h),
                 Divider(
                   color: Colors.grey.shade200,

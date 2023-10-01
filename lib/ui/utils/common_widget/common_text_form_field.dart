@@ -4,7 +4,6 @@ import '../theme/app_colors.dart';
 import '../theme/text_styles.dart';
 import '../theme/theme.dart';
 
-
 class CommonTextFormField extends StatelessWidget {
   final String? hintText;
   final Widget? suffixIcon;
@@ -17,7 +16,7 @@ class CommonTextFormField extends StatelessWidget {
   final TextEditingController? controller;
   final FocusNode? focusNode;
   final List<TextInputFormatter>? inputFormatters;
-  final String? Function(String?)?  validator;
+  final String? Function(String?)? validator;
   final TextInputType? keyboardType;
   final TextStyle? suffixStyle;
   final GestureTapCallback? onTap;
@@ -40,7 +39,13 @@ class CommonTextFormField extends StatelessWidget {
       this.keyboardType,
       this.suffixStyle,
       this.validator,
-      this.onTap, this.prefixIcon, this.onChanged, this.maxLength, this.fillColor, this.customBorder, this.contentPadding});
+      this.onTap,
+      this.prefixIcon,
+      this.onChanged,
+      this.maxLength,
+      this.fillColor,
+      this.customBorder,
+      this.contentPadding});
 
   @override
   Widget build(BuildContext context) {
@@ -57,45 +62,54 @@ class CommonTextFormField extends StatelessWidget {
       onTap: onTap,
       validator: validator,
       obscureText: obscureText!,
-      style: TextStyles.w500.copyWith(color: AppColors.black, fontSize: 16.sp),
+      style: TextStyles.w400.copyWith(color: AppColors.black, fontSize: 15.sp),
       decoration: InputDecoration(
-        contentPadding: contentPadding,
+        contentPadding: contentPadding ??
+            EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
         counterText: "",
         filled: true,
         hintText: hintText,
         hintStyle: hintStyle ??
             TextStyles.w500.copyWith(
-                fontSize: fontSize ?? 16.sp, color: AppColors.textGreyColor),
+                fontSize: fontSize ?? 14.sp, color: AppColors.textGreyColor),
         suffixIcon: Padding(
-          padding: EdgeInsets.only(right: 10.w,),
+          padding: EdgeInsets.only(
+            right: 10.w,
+          ),
           child: suffixIcon,
         ),
         suffixStyle: suffixStyle ??
             TextStyles.w500.copyWith(fontSize: 16.sp, color: AppColors.primary),
         prefixIcon: prefixIcon,
-        fillColor:fillColor?? AppColors.textFieldBackgroundColor,
-        border: customBorder ?? OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: const BorderSide(
-                color: AppColors.textFieldBorderColor, width: 1.0)),
-        enabledBorder:customBorder ?? OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: const BorderSide(
-                color: AppColors.textFieldBorderColor, width: 1.0)),
-        disabledBorder:customBorder ?? OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: const BorderSide(
-                color: AppColors.textFieldBorderColor, width: 1.0)),
-        errorBorder:customBorder ?? OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: const BorderSide(color: AppColors.red, width: 1.0)),
-        focusedErrorBorder:customBorder ?? OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: const BorderSide(color: AppColors.red, width: 1.0)),
-        focusedBorder:customBorder ?? OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: const BorderSide(
-                color: AppColors.textFieldBorderColor, width: 1.0)),
+        fillColor: fillColor ?? AppColors.textFieldBackgroundColor,
+        border: customBorder ??
+            OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+                borderSide: const BorderSide(
+                    color: AppColors.textFieldBorderColor, width: 1.0)),
+        enabledBorder: customBorder ??
+            OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+                borderSide: const BorderSide(
+                    color: AppColors.textFieldBorderColor, width: 1.0)),
+        disabledBorder: customBorder ??
+            OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+                borderSide: const BorderSide(
+                    color: AppColors.textFieldBorderColor, width: 1.0)),
+        errorBorder: customBorder ??
+            OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+                borderSide: const BorderSide(color: AppColors.red, width: 1.0)),
+        focusedErrorBorder: customBorder ??
+            OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+                borderSide: const BorderSide(color: AppColors.red, width: 1.0)),
+        focusedBorder: customBorder ??
+            OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+                borderSide: const BorderSide(
+                    color: AppColors.textFieldBorderColor, width: 1.0)),
       ),
     );
   }
